@@ -92,7 +92,11 @@ main{
 .hero-text h1:hover{ transform: translateY(-1px); letter-spacing:.4px; background: rgba(255,255,255,.04); border-radius: 12px; }
 .accent{ color: var(--brand); }
 .subtitle{ margin:0 0 14px 0; color: var(--muted); }
-.cta{ display:flex; gap:12px; margin-bottom: 10px; flex-wrap: wrap;}
+
+.cta{
+  display:flex; gap:12px; margin-bottom: 10px; flex-wrap: wrap;
+}
+
 .btn{
   text-decoration:none; font-weight:700; border-radius: 12px;
   padding: 10px 16px; display:inline-block; transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
@@ -103,14 +107,27 @@ main{
 .btn:hover{ transform: translateY(-2px); opacity: .95; }
 .contact-line a{ color: var(--fg); }
 
+/* CV / gradient variant */
 .btn.cv {
   background: linear-gradient(135deg, var(--brand-2), var(--brand));
   color: #fff;
-  border: none;               /* override ghost border if you switch classes */
+  border: none;
 }
-.btn.cv:hover {
+.btn.cv:hover { transform: translateY(-2px); opacity: .95; }
+
+/* Make LinkedIn, GitHub, and Email hero buttons use the same gradient (no HTML changes needed) */
+.cta a[href*="linkedin.com"],
+.cta a[href*="github.com"],
+.cta a[href^="mailto:"]{
+  background: linear-gradient(135deg, var(--brand-2), var(--brand));
+  color:#fff !important;
+  border:none;
+}
+.cta a[href*="linkedin.com"]:hover,
+.cta a[href*="github.com"]:hover,
+.cta a[href^="mailto:"]:hover{
   transform: translateY(-2px);
-  opacity: .95;
+  opacity:.95;
 }
 
 /* ====== Cards / Sections ====== */
@@ -130,8 +147,8 @@ h3{ margin:10px 0 6px 0; }
   box-shadow: var(--shadow);
 }
 
-/* ====== HW ids kept ====== */
-#education {}
+/* Helpful anchors for sections (IDs present in HTML) */
+#about {}
 #experience {}
 #projects {}
 #prog-languages {}
@@ -214,15 +231,11 @@ h3{ margin:10px 0 6px 0; }
 .note{ margin-top: 8px; }
 
 /* ====== Programming Languages (bars) ====== */
-.lang-bars{
-  display: grid; gap: 10px; margin-top: 12px;
-}
+.lang-bars{ display: grid; gap: 10px; margin-top: 12px; }
 .lang-row{
   display: grid; grid-template-columns: 120px 1fr; align-items: center; gap: 14px;
 }
-.lang-row > span{
-  color: var(--fg); font-weight: 700; letter-spacing: .2px;
-}
+.lang-row > span{ color: var(--fg); font-weight: 700; letter-spacing: .2px; }
 .bar{
   position: relative; height: 10px; border-radius: 999px;
   background: rgba(255,255,255,.10);
@@ -235,12 +248,8 @@ h3{ margin:10px 0 6px 0; }
   box-shadow: 0 6px 16px rgba(91,140,255,.25) inset;
   transition: width .6s ease;
 }
-/* width presets */
-.w-90{ width: 90%; }
-.w-85{ width: 85%; }
-.w-80{ width: 80%; }
-.w-75{ width: 75%; }
-.w-70{ width: 70%; }
+.w-90{ width: 90%; } .w-85{ width: 85%; } .w-80{ width: 80%; }
+.w-75{ width: 75%; } .w-70{ width: 70%; }
 
 @media (max-width: 520px){
   .lang-row{ grid-template-columns: 1fr; gap: 6px; }
@@ -263,19 +272,15 @@ h3{ margin:10px 0 6px 0; }
   box-shadow: var(--shadow);
   border-color: rgba(91,140,255,.45);
 }
-.util-col h3{
-  margin: 4px 0 8px 0; font-size: 1.05rem;
-}
-ul.clean{
-  list-style: none; padding-left: 0; margin: 0;
-}
+.util-col h3{ margin: 4px 0 8px 0; font-size: 1.05rem; }
+ul.clean{ list-style: none; padding-left: 0; margin: 0; }
 ul.clean li{
   padding: 6px 0;
   border-bottom: 1px dashed rgba(255,255,255,.12);
 }
 ul.clean li:last-child{ border-bottom: none; }
 
-/* ====== Contact buttons ====== */
+/* ====== Contact buttons (used in Contact + Footer) ====== */
 .btn.link{
   background: rgb(42, 65, 167);
   color:#fff; border: none;
@@ -288,7 +293,17 @@ ul.clean li:last-child{ border-bottom: none; }
 
 /* ====== Footer ====== */
 .footer{
-  display:flex; justify-content:center; margin: 26px 0 0 0;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  align-items: center;
+  gap: 12px;
+  margin: 26px 0 0 0;
+}
+.contact-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 .totop{
   color: var(--fg); text-decoration: none; opacity:.8;
@@ -298,6 +313,12 @@ ul.clean li:last-child{ border-bottom: none; }
   box-shadow: var(--shadow);
 }
 .totop:hover{ opacity:1; transform: translateY(-2px); }
+
+/* ====== Responsive footer layout ====== */
+@media (max-width: 520px){
+  .footer{ flex-direction: column; gap: 14px; }
+  .contact-buttons{ justify-content: center; width: 100%; }
+}
 
 /* ====== Accessibility ====== */
 @media (prefers-reduced-motion: reduce){
