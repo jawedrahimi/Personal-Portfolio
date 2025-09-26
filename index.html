@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Fancy font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Inter for body, Playfair for accent headings -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+  <title>Ahmad Jawed Rahimi — Portfolio</title>
+</head>
+<body>
+  <!-- Sticky nav -->
+  <header class="nav">
+    <a class="brand" href="#top">A<span>JR</span></a>
+    <nav class="links">
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Animated gradient background layer -->
+  <div class="bg"></div>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <img class="avatar" src="assets/ahmad.jpg" alt="Portrait of Ahmad Jawed Rahimi" />
+      <div class="hero-text">
+        <h1><span class="accent">Ahmad</span> Jawed Rahimi</h1>
+        <p class="subtitle">
+          EECS @ UC Berkeley · Software & Systems · Circuits · Research & Community
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/ahmadrahimi1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <p class="contact-line">
+          <a href="mailto:jawedrahimi@berkeley.edu">jawedrahimi@berkeley.edu</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <div class="section-wrapper card" id="education">
+      <h2>Education</h2>
+      <h3>University of California, Berkeley — <em>B.S. Electrical Engineering &amp; Computer Sciences</em></h3>
+      <p><b>Graduation:</b> May 2026</p>
+      <p class="muted"><b>Coursework:</b> CS 61A/61B/61C, CS 169, Intro to AI, EECS 16A/16B, Circuit Analysis, Multivariable Calculus, Linear Algebra, Differential Equations, Discrete Math & Probability, Multivariable Physics.</p>
+    </div>
+
+    <!-- Experience -->
+    <div class="section-wrapper card" id="experience">
+      <h2>Experience</h2>
+
+      <!-- Experience timeline wrapper (keeps your class name for the HW) -->
+      <div class="experience-wrapper timeline">
+        <!-- VFB -->
+        <div class="experience-list-item timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Engineering Division — Vertical Farming at Berkeley</h3>
+            <p class="meta">Berkeley, CA · Aug 2025 – Present</p>
+            <ul>
+              <li>Designed sustainable vertical farming solutions with automation & sensor monitoring.</li>
+              <li>Prototyped hydroponic nutrient/water delivery mechanisms.</li>
+              <li>Collaborated cross-discipline (programming + plant science) on research projects.</li>
+            </ul>
+            <div class="tags">
+              <span>Hydroponics</span><span>Automation</span><span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Helping Hands -->
+        <div class="experience-list-item timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Software Engineer (Intern) — Helping Hands Corporation</h3>
+            <p class="meta">Remote · Jun 2025 – Aug 2025</p>
+            <ul>
+              <li>Built intelligent task-automation modules; OS interfacing in Python/C++.</li>
+              <li>Code reviews, debugging, and agile practices for maintainable components.</li>
+              <li>Researched & integrated automation + AI into experimental prototypes.</li>
+            </ul>
+            <div class="tags">
+              <span>Python</span><span>C++</span><span>Systems</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FSAE -->
+        <div class="experience-list-item timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Electrical Subteam (Harness) — UC Berkeley Formula Racing</h3>
+            <p class="meta">Berkeley, CA · Aug 2024 – Dec 2025</p>
+            <ul>
+              <li>Designed/constructed high-reliability electrical harness for race car.</li>
+              <li>Validated with &lt;1% failure rate under rigorous testing.</li>
+            </ul>
+            <div class="tags">
+              <span>Harness</span><span>Testing</span><span>Reliability</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- FLC Tutor -->
+        <div class="experience-list-item timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>Programming/Math/Physics Tutor — Folsom Lake College</h3>
+            <p class="meta">Folsom, CA · Apr 2023 – Jan 2025</p>
+            <ul>
+              <li>Tutored Calculus, Physics, C++, Java, Python; improved student outcomes.</li>
+              <li>Mentored study/leadership skills to boost academic performance.</li>
+            </ul>
+            <div class="tags">
+              <span>Tutoring</span><span>STEM</span><span>Mentoring</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Elections -->
+        <div class="experience-list-item timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <h3>IT & Student Assistant — El Dorado County Elections</h3>
+            <p class="meta">Placerville, CA · Apr 2022 – Dec 2024</p>
+            <ul>
+              <li>Supported voting machines, tabulators, and registration databases.</li>
+              <li>Installed/maintained election software & hardware under tight timelines.</li>
+              <li>Troubleshot and resolved system issues quickly.</li>
+            </ul>
+            <div class="tags">
+              <span>IT Support</span><span>Hardware</span><span>Ops</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects -->
+    <div class="section-wrapper card" id="projects">
+      <h2>Projects</h2>
+
+      <!-- Uses your required classes, but with a responsive grid -->
+      <div class="project-wrapper grid">
+        <div class="project-list-item pcard">
+          <h3>Scheme Interpreter (Python)</h3>
+          <p>Interpreter with correct parsing/evaluation and REPL behavior.</p>
+          <div class="tags"><span>Python</span><span>Parsers</span></div>
+        </div>
+
+        <div class="project-list-item pcard">
+          <h3>World Generator (Java)</h3>
+          <p>Procedural 2D world gen with deterministic seeds and navigable layouts.</p>
+          <div class="tags"><span>Java</span><span>Algorithms</span></div>
+        </div>
+
+        <div class="project-list-item pcard">
+          <h3>Robot Evolution (C++)</h3>
+          <p>Evolutionary sim with sensors, map gen, and fitness-driven reproduction.</p>
+          <div class="tags"><span>C++</span><span>Evolutionary</span></div>
+        </div>
+
+        <div class="project-list-item pcard">
+          <h3>ActionMap (Rails)</h3>
+          <p>Integrated Google Civic/Geocodio + News API; “Issue” taxonomy; 2-step article flow.</p>
+          <div class="tags"><span>Rails</span><span>APIs</span></div>
+        </div>
+
+        <div class="project-list-item pcard">
+          <h3>Quality & CI</h3>
+          <p>RSpec/WebMock, GitHub Actions, RuboCop/Haml-Lint; ~100% coverage.</p>
+          <div class="tags"><span>Testing</span><span>CI</span></div>
+        </div>
+
+        <div class="project-list-item pcard">
+          <h3>Treble Boost Effect Box</h3>
+          <p>Op-amp high-pass filter; component design, measured response, optimized gain.</p>
+          <div class="tags"><span>Circuits</span><span>Audio</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Skills -->
+    <div class="section-wrapper card" id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div><b>Languages:</b> C/C++, Python, Java, JavaScript, Ruby, Scheme, SQL</div>
+        <div><b>Web/Software:</b> Node.js, React, Express, MongoDB, Rails, REST, HTML/CSS, Git/GitHub, Agile/Scrum, RSpec, WebMock, GitHub Actions, RuboCop, Haml-Lint</div>
+        <div><b>Data/Tools:</b> Pandas, NumPy, SQL (analysis/visualization)</div>
+        <div><b>Hardware:</b> Arduino, Op-amp circuits, active filters, electrical harness</div>
+        <div><b>Apps/Other:</b> AutoCAD, SolidWorks (basic), MATLAB (intro), Linux/Unix, Docker (basic), LaTeX</div>
+      </div>
+    </div>
+
+    <!-- Contact -->
+    <div class="section-wrapper card" id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a class="btn link" href="mailto:jawedrahimi@berkeley.edu">jawedrahimi@berkeley.edu</a></p>
+      <p>LinkedIn: Click <a class="btn link" href="https://www.linkedin.com/in/ahmadrahimi1" target="_blank" rel="noopener noreferrer">here</a> to connect!</p>
+    </div>
+
+    <footer class="footer">
+      <a href="#top" class="totop">↑ Back to top</a>
+    </footer>
+  </main>
+</body>
+</html>
