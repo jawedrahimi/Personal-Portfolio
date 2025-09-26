@@ -5,10 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Fancy font -->
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <!-- Inter for body, Playfair for accent headings -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css" />
@@ -19,15 +18,18 @@
   <header class="nav">
     <a class="brand" href="#top">A<span>JR</span></a>
     <nav class="links">
+      <a href="assets/Ahmad_Jawed_Rahimi_CV.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
       <a href="#education">Education</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
+      <a href="#prog-languages">Programming</a>
+      <a href="#languages">Languages</a>
+      <a href="#utilities">Utilities</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Animated gradient background layer -->
+  <!-- Animated gradient background -->
   <div class="bg"></div>
 
   <main id="top">
@@ -42,9 +44,10 @@
         <div class="cta">
           <a class="btn primary" href="#projects">View Projects</a>
           <a class="btn ghost" href="https://www.linkedin.com/in/ahmadrahimi1" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        </div>
+          <a class="btn ghost" href="assets/Ahmad_Jawed_Rahimi_CV.pdf" target="_blank" rel="noopener noreferrer">Resume</a> <!-- NEW -->
+        </div>        
         <p class="contact-line">
-          <a href="mailto:jawedrahimi@berkeley.edu">jawedrahimi@berkeley.edu</a>
+          <a href="mailto:jawedrahimi@berkeley.edu">jawedrahimi@berkeley.edu</a> 
         </p>
       </div>
     </section>
@@ -53,17 +56,14 @@
     <div class="section-wrapper card" id="education">
       <h2>Education</h2>
       <h3>University of California, Berkeley — <em>B.S. Electrical Engineering &amp; Computer Sciences</em></h3>
-      <p><b>Graduation:</b> May 2026</p>
-      <p class="muted"><b>Coursework:</b> CS 61A/61B/61C, CS 169, Intro to AI, EECS 16A/16B, Circuit Analysis, Multivariable Calculus, Linear Algebra, Differential Equations, Discrete Math & Probability, Multivariable Physics.</p>
+      <p><b>Graduation:</b> Decemeber 2026</p>
+      <p class="muted"><b>Coursework:</b> Structure & Interpretation of Computer Programs, Data Structures, Machine Structure, Intro to Electrical Engineering, Intro to Software Engineering, Intro to Artificial Intelligence, Circuit Analysis, Designing Information Devices and Systems I & II, Multi-Variables Physics for Scientists & Engineers, Multi-variable calculus, Linear Algebra, Differential Equation, Discrete Math & Probability Theory.</p>
     </div>
 
-    <!-- Experience -->
+    <!-- Experience (Timeline) -->
     <div class="section-wrapper card" id="experience">
       <h2>Experience</h2>
-
-      <!-- Experience timeline wrapper (keeps your class name for the HW) -->
       <div class="experience-wrapper timeline">
-        <!-- VFB -->
         <div class="experience-list-item timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -80,7 +80,6 @@
           </div>
         </div>
 
-        <!-- Helping Hands -->
         <div class="experience-list-item timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -97,7 +96,6 @@
           </div>
         </div>
 
-        <!-- FSAE -->
         <div class="experience-list-item timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -113,7 +111,6 @@
           </div>
         </div>
 
-        <!-- FLC Tutor -->
         <div class="experience-list-item timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -129,7 +126,6 @@
           </div>
         </div>
 
-        <!-- Elections -->
         <div class="experience-list-item timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -151,8 +147,6 @@
     <!-- Projects -->
     <div class="section-wrapper card" id="projects">
       <h2>Projects</h2>
-
-      <!-- Uses your required classes, but with a responsive grid -->
       <div class="project-wrapper grid">
         <div class="project-list-item pcard">
           <h3>Scheme Interpreter (Python)</h3>
@@ -192,15 +186,90 @@
       </div>
     </div>
 
-    <!-- Skills -->
-    <div class="section-wrapper card" id="skills">
-      <h2>Skills</h2>
-      <div class="skills">
-        <div><b>Languages:</b> C/C++, Python, Java, JavaScript, Ruby, Scheme, SQL</div>
-        <div><b>Web/Software:</b> Node.js, React, Express, MongoDB, Rails, REST, HTML/CSS, Git/GitHub, Agile/Scrum, RSpec, WebMock, GitHub Actions, RuboCop, Haml-Lint</div>
-        <div><b>Data/Tools:</b> Pandas, NumPy, SQL (analysis/visualization)</div>
-        <div><b>Hardware:</b> Arduino, Op-amp circuits, active filters, electrical harness</div>
-        <div><b>Apps/Other:</b> AutoCAD, SolidWorks (basic), MATLAB (intro), Linux/Unix, Docker (basic), LaTeX</div>
+    <!-- Programming Languages -->
+    <div class="section-wrapper card" id="prog-languages">
+      <h2>Programming Languages</h2>
+
+      <!-- Badges -->
+      <div class="badges">
+        <span class="badge pill strong">C/C++</span>
+        <span class="badge pill strong">Python</span>
+        <span class="badge pill">Java</span>
+        <span class="badge pill">JavaScript</span>
+        <span class="badge pill">Ruby</span>
+        <span class="badge pill">Scheme</span>
+        <span class="badge pill">SQL</span>
+      </div>
+
+      <!-- Proficiency bars -->
+      <div class="lang-bars">
+        <div class="lang-row">
+          <span>C/C++</span>
+          <div class="bar"><div class="fill w-90"></div></div>
+        </div>
+        <div class="lang-row">
+          <span>Python</span>
+          <div class="bar"><div class="fill w-90"></div></div>
+        </div>
+        <div class="lang-row">
+          <span>Java</span>
+          <div class="bar"><div class="fill w-85"></div></div>
+        </div>
+        <div class="lang-row">
+          <span>JavaScript</span>
+          <div class="bar"><div class="fill w-80"></div></div>
+        </div>
+        <div class="lang-row">
+          <span>Ruby</span>
+          <div class="bar"><div class="fill w-75"></div></div>
+        </div>
+        <div class="lang-row">
+          <span>Scheme</span>
+          <div class="bar"><div class="fill w-70"></div></div>
+        </div>
+        <div class="lang-row">
+          <span>SQL</span>
+          <div class="bar"><div class="fill w-75"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Utilities / Tools -->
+    <div class="section-wrapper card" id="utilities">
+      <h2>Utilities</h2>
+      <div class="util-grid">
+        <div class="util-col">
+          <h3>Web & Software</h3>
+          <ul class="clean">
+            <li>Node.js · React · Express · MongoDB</li>
+            <li>Ruby on Rails · REST APIs</li>
+            <li>HTML/CSS · Git/GitHub · Agile/Scrum</li>
+            <li>RSpec · WebMock · RuboCop · Haml-Lint</li>
+            <li>GitHub Actions (CI)</li>
+          </ul>
+        </div>
+        <div class="util-col">
+          <h3>Data & Analysis</h3>
+          <ul class="clean">
+            <li>Pandas · NumPy</li>
+            <li>SQL (analysis & visualization)</li>
+          </ul>
+        </div>
+        <div class="util-col">
+          <h3>Hardware & Circuits</h3>
+          <ul class="clean">
+            <li>Arduino · Op-amp circuits · Active filters</li>
+            <li>Electrical harness design</li>
+          </ul>
+        </div>
+        <div class="util-col">
+          <h3>IDEs & Apps</h3>
+          <ul class="clean">
+            <li>VS Code · IntelliJ IDEA · Eclipse</li>
+            <li>MATLAB (intro) · AutoCAD · SolidWorks (basic)</li>
+            <li>Linux/Unix CLI · Docker (basic) · LaTeX</li>
+          </ul>
+        </div>
       </div>
     </div>
 
