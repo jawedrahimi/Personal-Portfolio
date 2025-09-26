@@ -13,6 +13,18 @@
   <link rel="stylesheet" href="styles.css" />
   <title>Ahmad Jawed Rahimi — Portfolio</title>
 </head>
+
+<script>
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+  if (location.hash) {
+    history.replaceState(null, '', location.pathname + location.search);
+  }
+  window.scrollTo(0, 0);
+</script>
+
+
 <body>
   <!-- Sticky nav -->
   <header class="nav">

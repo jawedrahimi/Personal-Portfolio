@@ -147,14 +147,9 @@ h3{ margin:10px 0 6px 0; }
   box-shadow: var(--shadow);
 }
 
-/* Helpful anchors for sections (IDs present in HTML) */
-#about {}
-#experience {}
-#projects {}
-#prog-languages {}
-#languages {}
-#utilities {}
-#contact {}
+#about, #experience, #projects, #prog-languages, #utilities, #contact {
+  scroll-margin-top: 90px;
+}
 
 /* ====== Experience timeline ====== */
 .timeline{
@@ -280,7 +275,7 @@ ul.clean li{
 }
 ul.clean li:last-child{ border-bottom: none; }
 
-/* ====== Contact buttons (used in Contact + Footer) ====== */
+/* ====== Contact-style buttons (used in Contact/Footer if added) ====== */
 .btn.link{
   background: rgb(42, 65, 167);
   color:#fff; border: none;
