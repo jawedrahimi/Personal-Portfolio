@@ -159,7 +159,7 @@ body::before{
 }
 
 /* Responsive nav */
-@media (max-width: 720px){
+@media (max-width: 900px){
   .nav{
     flex-wrap:wrap;
     row-gap:8px;
@@ -169,19 +169,30 @@ body::before{
     justify-content:flex-end;
   }
 }
-@media (max-width: 520px){
+
+@media (max-width: 640px){
   .nav{
     justify-content:center;
+    padding:10px 14px;
   }
   .nav .links{
     justify-content:center;
     width:100%;
+    gap:10px;
+    font-size:.78rem;
   }
 }
 
+/* ====== Layout container ====== */
 main{
   width:min(1100px, 92%);
-  margin: 32px auto 64px;
+  margin: 24px auto 64px;
+}
+
+@media (max-width: 640px){
+  main{
+    margin:18px auto 40px;
+  }
 }
 
 /* ====== Hero with UC Berkeley background ====== */
@@ -195,7 +206,7 @@ main{
   gap: 28px;
   align-items:center;
   padding:32px;
-  margin: 32px 0 22px;
+  margin: 24px 0 18px;
   border-radius:26px;
   box-shadow:var(--shadow);
   overflow:hidden;
@@ -237,7 +248,7 @@ main{
 
 .hero-text h1{
   font-family: 'Playfair Display', serif;
-  font-size: clamp(32px, 3.8vw, 46px);
+  font-size: clamp(30px, 3.4vw, 44px);
   margin:0 0 6px 0;
   letter-spacing:.04em;
   background: linear-gradient(120deg, #e5e7eb, #f9fafb, #60a5fa, #a855f7);
@@ -267,7 +278,7 @@ main{
 
 .page-hint{
   margin-top:14px;
-  font-size:.8rem;
+  font-size:.78rem;
   text-transform:uppercase;
   letter-spacing:.16em;
   color:rgba(148,163,184,.9);
@@ -279,7 +290,7 @@ main{
     grid-template-columns:1fr;
     text-align:center;
     gap:20px;
-    padding:26px 20px;
+    padding:22px 18px;
   }
 
   .avatar{
@@ -291,9 +302,23 @@ main{
   .cta{
     justify-content:center;
   }
+
+  .page-hint{
+    letter-spacing:.12em;
+  }
 }
 
-/* ====== Buttons ====== */
+@media (max-width: 480px){
+  .hero{
+    margin-top:12px;
+    padding:18px 14px;
+  }
+  .subtitle{
+    font-size:.9rem;
+  }
+}
+
+/* ====== Buttons (unified style) ====== */
 .btn{
   text-decoration:none;
   font-weight:700;
@@ -316,12 +341,11 @@ main{
     background .16s ease;
 }
 
-/* optional: make "View Projects" a tiny bit stronger */
+/* optional: primary slightly stronger */
 .btn.primary{
   background: radial-gradient(circle at 0% 0%, var(--brand-3), var(--brand-2));
 }
 
-/* all hero buttons share the same base style now */
 .btn.cv,
 .cta a[href*="linkedin.com"],
 .cta a[href*="github.com"],
@@ -336,7 +360,14 @@ main{
   box-shadow: 0 18px 40px rgba(15,23,42,.9);
 }
 
-
+/* Smaller buttons on very small screens */
+@media (max-width: 480px){
+  .btn{
+    padding: 8px 16px;
+    font-size:.8rem;
+    letter-spacing:.06em;
+  }
+}
 
 /* ====== Headings ====== */
 h2{
@@ -699,14 +730,11 @@ h3{
   }
 }
 
-/* ====== Mobile tweaks ====== */
-@media (max-width:640px){
-  .card.section-wrapper{
-    margin:18px 0;
-  }
-
+/* ====== Mobile typography & layout tweaks ====== */
+@media (max-width: 640px){
   h2{
-    font-size:18px;
+    font-size:17px;
+    letter-spacing:.10em;
   }
 
   h3{
@@ -717,6 +745,19 @@ h3{
   .meta,
   li{
     font-size:14px;
+  }
+
+  .card.section-wrapper{
+    margin:18px 0;
+    border-radius:18px;
+  }
+
+  .accordion-header{
+    padding:12px 16px;
+  }
+
+  .accordion-body{
+    padding:0 16px 14px 16px;
   }
 
   .grid{
@@ -738,6 +779,19 @@ h3{
   .timeline-content{
     padding:12px;
     margin-left:16px;
+  }
+}
+
+/* Even tighter on very small phones */
+@media (max-width: 400px){
+  .card.section-wrapper{
+    margin:14px 0;
+  }
+  .accordion-header{
+    padding:10px 12px;
+  }
+  .accordion-body{
+    padding:0 12px 12px 12px;
   }
 }
 
