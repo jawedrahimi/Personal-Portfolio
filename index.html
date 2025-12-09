@@ -46,7 +46,7 @@
   <div class="bg"></div>
 
   <main id="top">
-    <!-- Hero (always visible) -->
+    <!-- Hero -->
     <section class="hero">
       <img class="avatar" src="assets/ahmad.jpg" alt="Portrait of Ahmad Jawed Rahimi" />
       <div class="hero-text">
@@ -66,290 +66,339 @@
     </section>
 
     <!-- About Me -->
-    <div class="section-wrapper card accordion" id="about">
+    <div class="section-wrapper card accordion" id="about" data-section-index="0">
       <button class="accordion-header" type="button">
-        <h2>About Me</h2>
+        <div class="accordion-title-wrap">
+          <span class="section-pill">01</span>
+          <h2>About Me</h2>
+        </div>
         <span class="accordion-icon">+</span>
       </button>
       <div class="accordion-body">
-        <p>
-          I am an Electrical Engineering and Computer Sciences student at UC Berkeley focused on building systems that stay correct and stable under real-world constraints. My work spans low-level systems, embedded hardware, and distributed execution—areas where correctness depends not only on what a system does, but when it does it under noise, latency, and concurrency.
-        </p>
-        <p>
-          My academic preparation emphasizes implementation-level reasoning: instruction timing, cache coherence, synchronization, communication channel behavior, and device-level effects like thermal variation and voltage noise. These experiences shaped how I approach engineering—treating timing, resource contention, and failure surfaces as fundamental design elements rather than afterthoughts.
-        </p>
-        <p>
-          My research centers on temporal correctness in distributed cyber-physical systems. I design automated, hardware-in-the-loop testing pipelines that execute programs on embedded devices, capture logical-time traces, detect timing violations, and compare temporal execution behavior across compiler versions. This work aims to turn timing assumptions into measurable, enforceable guarantees.
-        </p>
-        <p>
-          Beyond research, I work on embedded sensing and automation platforms for sustainable agriculture, designing real-time monitoring systems and control loops that must remain reliable despite environmental drift and hardware imperfections. I also have industry experience developing low-level software modules, strengthening automation systems, and implementing reproducible testing and CI workflows.
-        </p>
-        <p>
-          Across everything I build, my goal is consistent: to create systems that are deterministic, observable, and resilient—even when the physical world introduces uncertainty.
-        </p>
+        <div class="accordion-body-inner">
+          <button class="accordion-close" type="button">Close section</button>
 
-        <div class="badges" style="margin-top:10px;">
-          <span class="badge pill strong">Real-Time &amp; CPS</span>
-          <span class="badge pill">Distributed Systems</span>
-          <span class="badge pill">Embedded Hardware</span>
-          <span class="badge pill">Hardware-in-the-Loop</span>
-          <span class="badge pill">Testing &amp; CI</span>
+          <p>
+            I am an Electrical Engineering and Computer Sciences student at UC Berkeley focused on building systems that stay correct and stable under real-world constraints. My work spans low-level systems, embedded hardware, and distributed execution—areas where correctness depends not only on what a system does, but when it does it under noise, latency, and concurrency.
+          </p>
+          <p>
+            My academic preparation emphasizes implementation-level reasoning: instruction timing, cache coherence, synchronization, communication channel behavior, and device-level effects like thermal variation and voltage noise. These experiences shaped how I approach engineering—treating timing, resource contention, and failure surfaces as fundamental design elements rather than afterthoughts.
+          </p>
+          <p>
+            My research centers on temporal correctness in distributed cyber-physical systems. I design automated, hardware-in-the-loop testing pipelines that execute programs on embedded devices, capture logical-time traces, detect timing violations, and compare temporal execution behavior across compiler versions. This work aims to turn timing assumptions into measurable, enforceable guarantees.
+          </p>
+          <p>
+            Beyond research, I work on embedded sensing and automation platforms for sustainable agriculture, designing real-time monitoring systems and control loops that must remain reliable despite environmental drift and hardware imperfections. I also have industry experience developing low-level software modules, strengthening automation systems, and implementing reproducible testing and CI workflows.
+          </p>
+          <p>
+            Across everything I build, my goal is consistent: to create systems that are deterministic, observable, and resilient—even when the physical world introduces uncertainty.
+          </p>
+
+          <div class="badges" style="margin-top:10px;">
+            <span class="badge pill strong">Real-Time &amp; CPS</span>
+            <span class="badge pill">Distributed Systems</span>
+            <span class="badge pill">Embedded Hardware</span>
+            <span class="badge pill">Hardware-in-the-Loop</span>
+            <span class="badge pill">Testing &amp; CI</span>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Education -->
-    <div class="section-wrapper card accordion" id="education">
+    <div class="section-wrapper card accordion" id="education" data-section-index="1">
       <button class="accordion-header" type="button">
-        <h2>Education</h2>
+        <div class="accordion-title-wrap">
+          <span class="section-pill">02</span>
+          <h2>Education</h2>
+        </div>
         <span class="accordion-icon">+</span>
       </button>
       <div class="accordion-body">
-        <h3>University of California, Berkeley</h3>
-        <p class="meta">Bachelor of Science — Electrical Engineering &amp; Computer Sciences · May 2026</p>
+        <div class="accordion-body-inner">
+          <button class="accordion-close" type="button">Close section</button>
 
-        <h3>Folsom Lake College</h3>
-        <p class="meta">Associate of Science: Mathematics, Physics, Computer Science · May 2024</p>
-        <p class="meta">Associate of Arts: Math &amp; Science — Interdisciplinary Studies</p>
-        <p><strong>Graduated with Highest Honors</strong></p>
+          <h3>University of California, Berkeley</h3>
+          <p class="meta">Bachelor of Science — Electrical Engineering &amp; Computer Sciences · May 2026</p>
 
-        <p class="muted">
-          Coursework: Structure &amp; Interpretation of Computer Programs, Data Structures, Machine Structures,
-          Intro to Electrical Engineering, Intro to Software Engineering, Intro to Artificial Intelligence, Circuit Analysis,
-          Designing Information Devices and Systems I &amp; II, Multivariable Physics for Scientists &amp; Engineers,
-          Multivariable Calculus, Linear Algebra, Differential Equations, Discrete Math &amp; Probability Theory.
-        </p>
+          <h3>Folsom Lake College</h3>
+          <p class="meta">Associate of Science: Mathematics, Physics, Computer Science · May 2024</p>
+          <p class="meta">Associate of Arts: Math &amp; Science — Interdisciplinary Studies</p>
+          <p><strong>Graduated with Highest Honors</strong></p>
+
+          <p class="muted">
+            Coursework: Structure &amp; Interpretation of Computer Programs, Data Structures, Machine Structures,
+            Intro to Electrical Engineering, Intro to Software Engineering, Intro to Artificial Intelligence, Circuit Analysis,
+            Designing Information Devices and Systems I &amp; II, Multivariable Physics for Scientists &amp; Engineers,
+            Multivariable Calculus, Linear Algebra, Differential Equations, Discrete Math &amp; Probability Theory.
+          </p>
+        </div>
       </div>
     </div>
 
     <!-- Research -->
-    <div class="section-wrapper card accordion" id="research">
+    <div class="section-wrapper card accordion" id="research" data-section-index="2">
       <button class="accordion-header" type="button">
-        <h2>Research</h2>
+        <div class="accordion-title-wrap">
+          <span class="section-pill">03</span>
+          <h2>Research</h2>
+        </div>
         <span class="accordion-icon">+</span>
       </button>
       <div class="accordion-body">
-        <h3>Undergraduate Researcher — EECS Department</h3>
-        <p class="meta">UC Berkeley · Jun 2025 – Present</p>
-        <p><strong>Deterministic Distributed Cyber-Physical Systems (Lingua Franca)</strong></p>
-        <ul>
-          <li>Research deterministic distributed CPS using the Lingua Franca coordination language, focusing on decentralized execution and real-time correctness.</li>
-          <li>Develop automated real-time testing pipelines that run federated programs on embedded hardware via GitHub Actions.</li>
-          <li>Integrate Raspberry Pi–based runners for hardware-in-the-loop regression testing, capturing jitter, drift, deadline misses, and nondeterminism across nodes.</li>
-          <li>Design stress tests for bandwidth throttling, packet delay, network intermittency, and dynamic timing configurations.</li>
-          <li>Implement trace comparison tools and automated fault detection for timing violations and semantic regressions.</li>
-        </ul>
+        <div class="accordion-body-inner">
+          <button class="accordion-close" type="button">Close section</button>
 
-        <div class="tags">
-          <span>Lingua Franca</span><span>Distributed CPS</span><span>GitHub Actions</span><span>Raspberry Pi</span>
-        </div>
+          <h3>Undergraduate Researcher — EECS Department</h3>
+          <p class="meta">UC Berkeley · Jun 2025 – Present</p>
+          <p><strong>Deterministic Distributed Cyber-Physical Systems (Lingua Franca)</strong></p>
+          <ul>
+            <li>Research deterministic distributed CPS using the Lingua Franca coordination language, focusing on decentralized execution and real-time correctness.</li>
+            <li>Develop automated real-time testing pipelines that run federated programs on embedded hardware via GitHub Actions.</li>
+            <li>Integrate Raspberry Pi–based runners for hardware-in-the-loop regression testing, capturing jitter, drift, deadline misses, and nondeterminism across nodes.</li>
+            <li>Design stress tests for bandwidth throttling, packet delay, network intermittency, and dynamic timing configurations.</li>
+            <li>Implement trace comparison tools and automated fault detection for timing violations and semantic regressions.</li>
+          </ul>
 
-        <h3>Engineering Division Researcher — Vertical Farming at Berkeley</h3>
-        <p class="meta">Berkeley, CA · Aug 2025 – Present</p>
-        <p><strong>Embedded Sensing &amp; Control for Sustainable Agriculture</strong></p>
-        <ul>
-          <li>Design embedded sensing systems for hydroponic and algae cultivation platforms (pH, EC, temperature, humidity, light, fluid level).</li>
-          <li>Develop microcontroller-based control loops for nutrient dosing, irrigation, and environmental regulation.</li>
-          <li>Build data pipelines to stream and visualize environmental signals for plant growth optimization and long-term experiments.</li>
-          <li>Maintain version-controlled firmware, schematics, and documentation; mentor peers in circuit and embedded design.</li>
-        </ul>
+          <div class="tags">
+            <span>Lingua Franca</span><span>Distributed CPS</span><span>GitHub Actions</span><span>Raspberry Pi</span>
+          </div>
 
-        <div class="tags">
-          <span>Embedded Systems</span><span>Sensing</span><span>Hydroponics</span><span>Control</span>
+          <h3>Engineering Division Researcher — Vertical Farming at Berkeley</h3>
+          <p class="meta">Berkeley, CA · Aug 2025 – Present</p>
+          <p><strong>Embedded Sensing &amp; Control for Sustainable Agriculture</strong></p>
+          <ul>
+            <li>Design embedded sensing systems for hydroponic and algae cultivation platforms (pH, EC, temperature, humidity, light, fluid level).</li>
+            <li>Develop microcontroller-based control loops for nutrient dosing, irrigation, and environmental regulation.</li>
+            <li>Build data pipelines to stream and visualize environmental signals for plant growth optimization and long-term experiments.</li>
+            <li>Maintain version-controlled firmware, schematics, and documentation; mentor peers in circuit and embedded design.</li>
+          </ul>
+
+          <div class="tags">
+            <span>Embedded Systems</span><span>Sensing</span><span>Hydroponics</span><span>Control</span>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Experience -->
-    <div class="section-wrapper card accordion" id="experience">
+    <div class="section-wrapper card accordion" id="experience" data-section-index="3">
       <button class="accordion-header" type="button">
-        <h2>Experience</h2>
+        <div class="accordion-title-wrap">
+          <span class="section-pill">04</span>
+          <h2>Experience</h2>
+        </div>
         <span class="accordion-icon">+</span>
       </button>
       <div class="accordion-body">
-        <div class="experience-wrapper timeline">
+        <div class="accordion-body-inner">
+          <button class="accordion-close" type="button">Close section</button>
 
-          <div class="experience-list-item timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Electrical Engineer — Vertical Farming at Berkeley</h3>
-              <p class="meta">UC Berkeley · Aug 2025 – Present · Berkeley, CA</p>
-              <ul>
-                <li>Design and implement engineering solutions for vertical farming systems with a focus on sustainability and efficiency.</li>
-                <li>Develop and debug software for automation, robotics, and sensor-based crop monitoring.</li>
-                <li>Prototype and test hydroponic nutrient and water delivery systems with cross-disciplinary teams.</li>
-              </ul>
-              <div class="tags">
-                <span>Automation</span><span>Sensing</span><span>Robotics</span>
+          <div class="experience-wrapper timeline">
+
+            <div class="experience-list-item timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Electrical Engineer — Vertical Farming at Berkeley</h3>
+                <p class="meta">UC Berkeley · Aug 2025 – Present · Berkeley, CA</p>
+                <ul>
+                  <li>Design and implement engineering solutions for vertical farming systems with a focus on sustainability and efficiency.</li>
+                  <li>Develop and debug software for automation, robotics, and sensor-based crop monitoring.</li>
+                  <li>Prototype and test hydroponic nutrient and water delivery systems with cross-disciplinary teams.</li>
+                </ul>
+                <div class="tags">
+                  <span>Automation</span><span>Sensing</span><span>Robotics</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="experience-list-item timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Software Engineer Intern — Helping Hands Corporation</h3>
-              <p class="meta">Remote · Jun 2025 – Aug 2025</p>
-              <ul>
-                <li>Design and test software modules for intelligent task automation systems at the OS level.</li>
-                <li>Develop low-level components in Python and C++ to interface with operating systems and improve automation capabilities.</li>
-                <li>Participate in code reviews, debugging, and agile standups; explore tools in automation and AI.</li>
-              </ul>
-              <div class="tags">
-                <span>Python</span><span>C++</span><span>Systems</span>
+            <div class="experience-list-item timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Software Engineer Intern — Helping Hands Corporation</h3>
+                <p class="meta">Remote · Jun 2025 – Aug 2025</p>
+                <ul>
+                  <li>Design and test software modules for intelligent task automation systems at the OS level.</li>
+                  <li>Develop low-level components in Python and C++ to interface with operating systems and improve automation capabilities.</li>
+                  <li>Participate in code reviews, debugging, and agile standups; explore tools in automation and AI.</li>
+                </ul>
+                <div class="tags">
+                  <span>Python</span><span>C++</span><span>Systems</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="experience-list-item timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Electrical Subteam (Harness) — UC Berkeley Formula Racing</h3>
-              <p class="meta">Berkeley, CA · Aug 2024 – Dec 2025</p>
-              <ul>
-                <li>Design and assemble high-reliability wiring harnesses for an electric race car.</li>
-                <li>Develop and execute test procedures achieving &lt;1% failure rate under vibration and load.</li>
-              </ul>
-              <div class="tags">
-                <span>Harness Design</span><span>Testing</span><span>Reliability</span>
+            <div class="experience-list-item timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Electrical Subteam (Harness) — UC Berkeley Formula Racing</h3>
+                <p class="meta">Berkeley, CA · Aug 2024 – Dec 2025</p>
+                <ul>
+                  <li>Design and assemble high-reliability wiring harnesses for an electric race car.</li>
+                  <li>Develop and execute test procedures achieving &lt;1% failure rate under vibration and load.</li>
+                </ul>
+                <div class="tags">
+                  <span>Harness Design</span><span>Testing</span><span>Reliability</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="experience-list-item timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>IT &amp; Student Assistant — El Dorado County Elections</h3>
-              <p class="meta">Placerville, CA · Apr 2022 – Dec 2024</p>
-              <ul>
-                <li>Support voting machines, ballot tabulators, and voter registration databases during county and statewide elections.</li>
-                <li>Install, configure, and maintain election software and hardware under tight timelines.</li>
-                <li>Troubleshoot time-sensitive issues in high-pressure, high-integrity environments.</li>
-              </ul>
-              <div class="tags">
-                <span>IT Support</span><span>Elections</span><span>Ops</span>
+            <div class="experience-list-item timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>IT &amp; Student Assistant — El Dorado County Elections</h3>
+                <p class="meta">Placerville, CA · Apr 2022 – Dec 2024</p>
+                <ul>
+                  <li>Support voting machines, ballot tabulators, and voter registration databases during county and statewide elections.</li>
+                  <li>Install, configure, and maintain election software and hardware under tight timelines.</li>
+                  <li>Troubleshoot time-sensitive issues in high-pressure, high-integrity environments.</li>
+                </ul>
+                <div class="tags">
+                  <span>IT Support</span><span>Elections</span><span>Ops</span>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div class="experience-list-item timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-              <h3>Programming / Math / Physics Tutor — Folsom Lake College</h3>
-              <p class="meta">Folsom, CA · Apr 2023 – Jan 2025</p>
-              <ul>
-                <li>Tutor Calculus, Physics, C++, Java, and Python in 1:1 and small-group sessions.</li>
-                <li>Help students build problem-solving habits and study strategies that improve course outcomes.</li>
-              </ul>
-              <div class="tags">
-                <span>Tutoring</span><span>STEM</span><span>Mentoring</span>
+            <div class="experience-list-item timeline-item">
+              <div class="timeline-dot"></div>
+              <div class="timeline-content">
+                <h3>Programming / Math / Physics Tutor — Folsom Lake College</h3>
+                <p class="meta">Folsom, CA · Apr 2023 – Jan 2025</p>
+                <ul>
+                  <li>Tutor Calculus, Physics, C++, Java, and Python in 1:1 and small-group sessions.</li>
+                  <li>Help students build problem-solving habits and study strategies that improve course outcomes.</li>
+                </ul>
+                <div class="tags">
+                  <span>Tutoring</span><span>STEM</span><span>Mentoring</span>
+                </div>
               </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
     </div>
 
     <!-- Projects -->
-    <div class="section-wrapper card accordion" id="projects">
+    <div class="section-wrapper card accordion" id="projects" data-section-index="4">
       <button class="accordion-header" type="button">
-        <h2>Projects</h2>
+        <div class="accordion-title-wrap">
+          <span class="section-pill">05</span>
+          <h2>Projects</h2>
+        </div>
         <span class="accordion-icon">+</span>
       </button>
       <div class="accordion-body">
-        <div class="project-wrapper grid">
+        <div class="accordion-body-inner">
+          <button class="accordion-close" type="button">Close section</button>
 
-          <div class="project-list-item pcard">
-            <h3>RISC-V CPU (Logisim)</h3>
-            <p>Designed and implemented a 32-bit RISC-V CPU in Logisim Evolution (ALU, control, immediates, memory pipeline) with unit and integration tests.</p>
-            <div class="tags"><span>RISC-V</span><span>Digital Design</span></div>
+          <div class="project-wrapper grid">
+
+            <div class="project-list-item pcard">
+              <h3>RISC-V CPU (Logisim)</h3>
+              <p>Designed and implemented a 32-bit RISC-V CPU in Logisim Evolution (ALU, control, immediates, memory pipeline) with unit and integration tests.</p>
+              <div class="tags"><span>RISC-V</span><span>Digital Design</span></div>
+            </div>
+
+            <div class="project-list-item pcard">
+              <h3>Real-Time Embedded CPS Testing</h3>
+              <p>Automated federated Lingua Franca testing on embedded platforms; measured deterministic behavior under delay, jitter, and load.</p>
+              <div class="tags"><span>CPS</span><span>Testing</span></div>
+            </div>
+
+            <div class="project-list-item pcard">
+              <h3>Treble Boost Effect Box</h3>
+              <p>Built an op-amp active high-pass filter; measured frequency response and tuned gain for high-frequency audio enhancement.</p>
+              <div class="tags"><span>Circuits</span><span>Audio</span></div>
+            </div>
+
+            <div class="project-list-item pcard">
+              <h3>ActionMap (Ruby on Rails)</h3>
+              <p>Integrated Google Civic/Geocodio and News APIs with an issue taxonomy, 2-step article flow, and CI (RSpec, WebMock, RuboCop, Haml-Lint).</p>
+              <div class="tags"><span>Rails</span><span>APIs</span><span>CI</span></div>
+            </div>
+
+            <div class="project-list-item pcard">
+              <h3>Scheme Interpreter (Python)</h3>
+              <p>Implemented a Scheme interpreter with correct parsing, evaluation, and REPL behavior for educational use.</p>
+              <div class="tags"><span>Python</span><span>Interpreters</span></div>
+            </div>
+
+            <div class="project-list-item pcard">
+              <h3>World Generator &amp; Robot Evolution</h3>
+              <p>Built a procedural world generator in Java and an evolutionary robot simulation in C++, with sensors, map generation, and fitness-based selection.</p>
+              <div class="tags"><span>Java</span><span>C++</span><span>Algorithms</span></div>
+            </div>
+
           </div>
-
-          <div class="project-list-item pcard">
-            <h3>Real-Time Embedded CPS Testing</h3>
-            <p>Automated federated Lingua Franca testing on embedded platforms; measured deterministic behavior under delay, jitter, and load.</p>
-            <div class="tags"><span>CPS</span><span>Testing</span></div>
-          </div>
-
-          <div class="project-list-item pcard">
-            <h3>Treble Boost Effect Box</h3>
-            <p>Built an op-amp active high-pass filter; measured frequency response and tuned gain for high-frequency audio enhancement.</p>
-            <div class="tags"><span>Circuits</span><span>Audio</span></div>
-          </div>
-
-          <div class="project-list-item pcard">
-            <h3>ActionMap (Ruby on Rails)</h3>
-            <p>Integrated Google Civic/Geocodio and News APIs with an issue taxonomy, 2-step article flow, and CI (RSpec, WebMock, RuboCop, Haml-Lint).</p>
-            <div class="tags"><span>Rails</span><span>APIs</span><span>CI</span></div>
-          </div>
-
-          <div class="project-list-item pcard">
-            <h3>Scheme Interpreter (Python)</h3>
-            <p>Implemented a Scheme interpreter with correct parsing, evaluation, and REPL behavior for educational use.</p>
-            <div class="tags"><span>Python</span><span>Interpreters</span></div>
-          </div>
-
-          <div class="project-list-item pcard">
-            <h3>World Generator &amp; Robot Evolution</h3>
-            <p>Built a procedural world generator in Java and an evolutionary robot simulation in C++, with sensors, map generation, and fitness-based selection.</p>
-            <div class="tags"><span>Java</span><span>C++</span><span>Algorithms</span></div>
-          </div>
-
         </div>
       </div>
     </div>
 
     <!-- Skills -->
-    <div class="section-wrapper card accordion" id="skills">
+    <div class="section-wrapper card accordion" id="skills" data-section-index="5">
       <button class="accordion-header" type="button">
-        <h2>Skills</h2>
+        <div class="accordion-title-wrap">
+          <span class="section-pill">06</span>
+          <h2>Skills</h2>
+        </div>
         <span class="accordion-icon">+</span>
       </button>
       <div class="accordion-body">
-        <h3>Programming</h3>
-        <div class="badges">
-          <span class="badge pill">C</span>
-          <span class="badge pill">C++</span>
-          <span class="badge pill">Python</span>
-          <span class="badge pill">Java</span>
-          <span class="badge pill">JavaScript</span>
-          <span class="badge pill">Ruby</span>
-          <span class="badge pill">Scheme</span>
-          <span class="badge pill">SQL</span>
+        <div class="accordion-body-inner">
+          <button class="accordion-close" type="button">Close section</button>
+
+          <h3>Programming</h3>
+          <div class="badges">
+            <span class="badge pill">C</span>
+            <span class="badge pill">C++</span>
+            <span class="badge pill">Python</span>
+            <span class="badge pill">Java</span>
+            <span class="badge pill">JavaScript</span>
+            <span class="badge pill">Ruby</span>
+            <span class="badge pill">Scheme</span>
+            <span class="badge pill">SQL</span>
+          </div>
+
+          <h3>Frameworks &amp; Tools</h3>
+          <p class="muted">Node.js, React, Express, Ruby on Rails, GitHub Actions, WebMock, RSpec</p>
+
+          <h3>Data &amp; Analysis</h3>
+          <p class="muted">NumPy, Pandas, probability modeling</p>
+
+          <h3>Hardware &amp; CPS</h3>
+          <p class="muted">Arduino, Raspberry Pi, embedded systems, op-amp circuits</p>
+
+          <h3>Software Engineering</h3>
+          <p class="muted">CI/CD, Git, debugging, systems programming</p>
+
+          <h3>Other Tools</h3>
+          <p class="muted">Docker, Linux/Unix, LaTeX, AutoCAD, SolidWorks, MATLAB</p>
         </div>
-
-        <h3>Frameworks &amp; Tools</h3>
-        <p class="muted">Node.js, React, Express, Ruby on Rails, GitHub Actions, WebMock, RSpec</p>
-
-        <h3>Data &amp; Analysis</h3>
-        <p class="muted">NumPy, Pandas, probability modeling</p>
-
-        <h3>Hardware &amp; CPS</h3>
-        <p class="muted">Arduino, Raspberry Pi, embedded systems, op-amp circuits</p>
-
-        <h3>Software Engineering</h3>
-        <p class="muted">CI/CD, Git, debugging, systems programming</p>
-
-        <h3>Other Tools</h3>
-        <p class="muted">Docker, Linux/Unix, LaTeX, AutoCAD, SolidWorks, MATLAB</p>
       </div>
     </div>
 
     <!-- Honors -->
-    <div class="section-wrapper card accordion" id="honors">
+    <div class="section-wrapper card accordion" id="honors" data-section-index="6">
       <button class="accordion-header" type="button">
-        <h2>Honors &amp; Awards</h2>
+        <div class="accordion-title-wrap">
+          <span class="section-pill">07</span>
+          <h2>Honors &amp; Awards</h2>
+        </div>
         <span class="accordion-icon">+</span>
       </button>
       <div class="accordion-body">
-        <ul>
-          <li><strong>Sharer Scholars Program, UC Berkeley</strong> (Aug 2024 – Present) — Selected for academic performance, leadership potential, and service commitment.</li>
-          <li><strong>Perry S. and Stella H. Tracy STEM Scholarship</strong> (Aug 2021 – May 2025) — Awarded for excellence in engineering coursework and merit.</li>
-          <li><strong>Sacramento Air Force Association Academic Scholarship</strong> (Aug 2021 – Dec 2021) — Recognized for academic resilience and early engineering promise.</li>
-          <li><strong>Phi Theta Kappa (PTK) Honor Society</strong> — Membership granted for academic excellence.</li>
-          <li><strong>Highest Honors Graduate, Folsom Lake College</strong> — Highest Honors across STEM degrees and certificates.</li>
-        </ul>
+        <div class="accordion-body-inner">
+          <button class="accordion-close" type="button">Close section</button>
+
+          <ul>
+            <li><strong>Sharer Scholars Program, UC Berkeley</strong> (Aug 2024 – Present) — Selected for academic performance, leadership potential, and service commitment.</li>
+            <li><strong>Perry S. and Stella H. Tracy STEM Scholarship</strong> (Aug 2021 – May 2025) — Awarded for excellence in engineering coursework and merit.</li>
+            <li><strong>Sacramento Air Force Association Academic Scholarship</strong> (Aug 2021 – Dec 2021) — Recognized for academic resilience and early engineering promise.</li>
+            <li><strong>Phi Theta Kappa (PTK) Honor Society</strong> — Membership granted for academic excellence.</li>
+            <li><strong>Highest Honors Graduate, Folsom Lake College</strong> — Highest Honors across STEM degrees and certificates.</li>
+          </ul>
+        </div>
       </div>
     </div>
 
@@ -359,7 +408,7 @@
     </footer>
   </main>
 
-  <!-- JS: particles, hero parallax, accordions -->
+  <!-- JS: particles, hero parallax, accordions, keyboard nav -->
   <script>
     // ================= PARTICLE BACKGROUND =================
     (function () {
@@ -416,59 +465,81 @@
       window.addEventListener('mousemove', handleMove);
     })();
 
-    // ================= ACCORDION LOGIC =================
+    // ================= ACCORDION + KEYBOARD NAV =================
     (function () {
       const accordions = Array.from(document.querySelectorAll('.accordion'));
 
-      function closeAllExcept(exceptId) {
-        accordions.forEach(card => {
-          const body = card.querySelector('.accordion-body');
-          const icon = card.querySelector('.accordion-icon');
-          if (!body) return;
-          if (card.id === exceptId) return;
-          card.classList.remove('open');
-          body.style.maxHeight = 0;
-          body.style.opacity = 0;
-          if (icon) icon.textContent = '+';
-        });
-      }
-
-      accordions.forEach(card => {
-        const header = card.querySelector('.accordion-header');
+      function setOpen(card, open) {
         const body = card.querySelector('.accordion-body');
         const icon = card.querySelector('.accordion-icon');
-        if (!header || !body) return;
+        if (!body) return;
 
-        header.addEventListener('click', () => {
-          const isOpen = card.classList.contains('open');
-          if (isOpen) {
-            card.classList.remove('open');
-            body.style.maxHeight = 0;
-            body.style.opacity = 0;
-            if (icon) icon.textContent = '+';
-          } else {
-            closeAllExcept(card.id);
-            card.classList.add('open');
-            body.style.maxHeight = body.scrollHeight + 'px';
-            body.style.opacity = 1;
-            if (icon) icon.textContent = '−';
-            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        });
-
-        // Start with About open by default
-        if (card.id === 'about') {
+        if (open) {
           card.classList.add('open');
           body.style.maxHeight = body.scrollHeight + 'px';
           body.style.opacity = 1;
           if (icon) icon.textContent = '−';
         } else {
+          card.classList.remove('open');
           body.style.maxHeight = 0;
           body.style.opacity = 0;
+          if (icon) icon.textContent = '+';
+        }
+      }
+
+      function closeAllExcept(exceptId) {
+        accordions.forEach(card => {
+          if (card.id === exceptId) return;
+          setOpen(card, false);
+        });
+      }
+
+      function getOpenIndex() {
+        const idx = accordions.findIndex(c => c.classList.contains('open'));
+        return idx;
+      }
+
+      function openByIndex(idx) {
+        if (idx < 0 || idx >= accordions.length) return;
+        const card = accordions[idx];
+        closeAllExcept(card.id);
+        setOpen(card, true);
+        card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+
+      // Setup click handlers
+      accordions.forEach(card => {
+        const header = card.querySelector('.accordion-header');
+        const body = card.querySelector('.accordion-body');
+        const closeBtn = card.querySelector('.accordion-close');
+        if (!header || !body) return;
+
+        header.addEventListener('click', () => {
+          const isOpen = card.classList.contains('open');
+          if (isOpen) {
+            setOpen(card, false);
+          } else {
+            closeAllExcept(card.id);
+            setOpen(card, true);
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+
+        if (closeBtn) {
+          closeBtn.addEventListener('click', () => {
+            setOpen(card, false);
+          });
+        }
+
+        // Initial state: About open, others closed
+        if (card.id === 'about') {
+          setOpen(card, true);
+        } else {
+          setOpen(card, false);
         }
       });
 
-      // Nav links: open the section instead of just scrolling
+      // Nav links: open section instead of only scrolling
       document.querySelectorAll('.nav .links a[href^="#"]').forEach(link => {
         link.addEventListener('click', (e) => {
           e.preventDefault();
@@ -476,35 +547,44 @@
           const target = document.getElementById(id);
           if (!target) return;
 
-          const body = target.querySelector('.accordion-body');
-          const icon = target.querySelector('.accordion-icon');
-          if (!body) return;
           closeAllExcept(id);
-          target.classList.add('open');
-          body.style.maxHeight = body.scrollHeight + 'px';
-          body.style.opacity = 1;
-          if (icon) icon.textContent = '−';
+          setOpen(target, true);
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
       });
 
-      // "View Projects" button: open Projects accordion
+      // "View Projects" button
       const projectsBtn = document.querySelector('.btn.primary[href="#projects"]');
       if (projectsBtn) {
         projectsBtn.addEventListener('click', (e) => {
           e.preventDefault();
           const target = document.getElementById('projects');
           if (!target) return;
-          const body = target.querySelector('.accordion-body');
-          const icon = target.querySelector('.accordion-icon');
           closeAllExcept('projects');
-          target.classList.add('open');
-          body.style.maxHeight = body.scrollHeight + 'px';
-          body.style.opacity = 1;
-          if (icon) icon.textContent = '−';
+          setOpen(target, true);
           target.scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
       }
+
+      // Keyboard navigation: ↑/↓ or j/k, Esc
+      window.addEventListener('keydown', (e) => {
+        const key = e.key.toLowerCase();
+        const openIdx = getOpenIndex();
+
+        if (key === 'arrowdown' || key === 'j') {
+          e.preventDefault();
+          const nextIdx = openIdx === -1 ? 0 : Math.min(openIdx + 1, accordions.length - 1);
+          openByIndex(nextIdx);
+        } else if (key === 'arrowup' || key === 'k') {
+          e.preventDefault();
+          const prevIdx = openIdx === -1 ? 0 : Math.max(openIdx - 1, 0);
+          openByIndex(prevIdx);
+        } else if (key === 'escape') {
+          if (openIdx !== -1) {
+            setOpen(accordions[openIdx], false);
+          }
+        }
+      });
     })();
   </script>
 </body>
