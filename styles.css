@@ -31,29 +31,29 @@ body{
   -webkit-font-smoothing: antialiased;
 }
 
-/* 🔵 BIG MOVING BUBBLES */
+/* 🔵 BIG MOVING BUBBLES — STRONG + OBVIOUS */
 .bg{
   position:fixed;
   inset:0;
-  z-index:0; /* important: behind content, above body */
+  z-index:0;           /* behind content, above body */
   pointer-events:none;
   background:
-    radial-gradient(900px 900px at 0% 0%,   rgba(96,165,250,0.55), transparent 65%),
-    radial-gradient(900px 900px at 100% 0%, rgba(45,212,191,0.55), transparent 65%),
-    radial-gradient(900px 900px at 50% 100%,rgba(147,112,255,0.55), transparent 65%);
-  filter: blur(32px);
+    radial-gradient(1100px 1100px at -10% 0%,   rgba(96,165,250,0.75), transparent 65%),
+    radial-gradient(1100px 1100px at 110% 0%,  rgba(45,212,191,0.75), transparent 65%),
+    radial-gradient(1100px 1100px at 50% 120%, rgba(167,139,250,0.8), transparent 65%);
+  filter: blur(40px);
   animation: float 22s ease-in-out infinite alternate;
 }
 
 @keyframes float{
   from{ transform: translate3d(0,0,0); }
-  to{   transform: translate3d(20px,-26px,0); }
+  to{   transform: translate3d(26px,-26px,0); }
 }
 
-/* no overlay on top of bubbles */
+/* make sure NOTHING covers bubbles as an overlay */
 body::before{ content:none; }
 
-/* Ensure content sits above bubbles */
+/* content sits above bubbles */
 .nav,
 .hero,
 main{
