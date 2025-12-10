@@ -15,6 +15,9 @@
 </head>
 
 <body>
+  <!-- Canvas particle bubbles -->
+  <canvas id="bubbles-canvas"></canvas>
+
   <!-- Animated gradient bubbles -->
   <div class="bg"></div>
 
@@ -58,7 +61,7 @@
     <section class="section-wrapper card accordion" id="about">
       <button class="accordion-header">
         <div class="accordion-title-wrap">
-          <span class="section-pill"></span>
+          <span class="section-pill">ABOUT</span>
           <h2>About Me</h2>
         </div>
         <span class="accordion-icon">›</span>
@@ -82,7 +85,7 @@
           </p>
 
           <div class="badges" style="margin-top:10px;">
-            <span class="badge">Real-Time &amp; CPS</span>
+            <span class="badge strong">Real-Time &amp; CPS</span>
             <span class="badge">Distributed Systems</span>
             <span class="badge">Embedded Hardware</span>
             <span class="badge">Hardware-in-the-Loop</span>
@@ -96,7 +99,7 @@
     <section class="section-wrapper card accordion" id="education">
       <button class="accordion-header">
         <div class="accordion-title-wrap">
-          <span class="section-pill"></span>
+          <span class="section-pill">EDU</span>
           <h2>Education</h2>
         </div>
         <span class="accordion-icon">›</span>
@@ -125,8 +128,7 @@
     <section class="section-wrapper card accordion" id="research">
       <button class="accordion-header">
         <div class="accordion-title-wrap">
-          <span class="section-pill">
-          </span>
+          <span class="section-pill">RSCH</span>
           <h2>Research</h2>
         </div>
         <span class="accordion-icon">›</span>
@@ -169,7 +171,7 @@
     <section class="section-wrapper card accordion" id="experience">
       <button class="accordion-header">
         <div class="accordion-title-wrap">
-          <span class="section-pill"></span>
+          <span class="section-pill">EXP</span>
           <h2>Experience</h2>
         </div>
         <span class="accordion-icon">›</span>
@@ -265,7 +267,7 @@
     <section class="section-wrapper card accordion" id="projects">
       <button class="accordion-header">
         <div class="accordion-title-wrap">
-          <span class="section-pill"></span>
+          <span class="section-pill">PRJ</span>
           <h2>Projects</h2>
         </div>
         <span class="accordion-icon">›</span>
@@ -317,7 +319,7 @@
     <section class="section-wrapper card accordion" id="skills">
       <button class="accordion-header">
         <div class="accordion-title-wrap">
-          <span class="section-pill"></span>
+          <span class="section-pill">SKL</span>
           <h2>Skills</h2>
         </div>
         <span class="accordion-icon">›</span>
@@ -358,7 +360,7 @@
     <section class="section-wrapper card accordion" id="honors">
       <button class="accordion-header">
         <div class="accordion-title-wrap">
-          <span class="section-pill"></span>
+          <span class="section-pill">HNR</span>
           <h2>Honors &amp; Awards</h2>
         </div>
         <span class="accordion-icon">›</span>
@@ -386,69 +388,96 @@
     document.addEventListener("DOMContentLoaded", () => {
       const accordions = document.querySelectorAll(".accordion");
 
-      function closeAllAccordions() {
-        accordions.forEach(a => {
-          const b = a.querySelector(".accordion-body");
-          a.classList.remove("open");
-          if (b) {
-            b.style.maxHeight = "0px";
-            b.style.opacity = "0";
-            b.style.transform = "translateY(-4px)";
-          }
-        });
-      }
+      /* ========================= */
+      /*  ACCORDION LOGIC (TOGGLE) */
+      /* ========================= */
 
-      function openAccordionById(id) {
-        const acc = document.getElementById(id);
-        if (!acc || !acc.classList.contains("accordion")) return;
-
+      function openAccordion(acc) {
         const body = acc.querySelector(".accordion-body");
         if (!body) return;
-
-        closeAllAccordions();
-
         acc.classList.add("open");
         body.style.maxHeight = body.scrollHeight + "px";
         body.style.opacity = "1";
         body.style.transform = "translateY(0)";
       }
 
-      // Open About by default
+      function closeAccordion(acc) {
+        const body = acc.querySelector(".accordion-body");
+        if (!body) return;
+        acc.classList.remove("open");
+        body.style.maxHeight = "0px";
+        body.style.opacity = "0";
+        body.style.transform = "translateY(-4px)";
+      }
+
+      function openAccordionById(id) {
+        const acc = document.getElementById(id);
+        if (!acc || !acc.classList.contains("accordion")) return;
+        openAccordion(acc);
+      }
+
+      // init all bodies closed
+      accordions.forEach(acc => {
+        const body = acc.querySelector(".accordion-body");
+        if (body) {
+          body.style.maxHeight = "0px";
+          body.style.opacity = "0";
+          body.style.transform = "translateY(-4px)";
+        }
+      });
+
+      // open About by default
       openAccordionById("about");
 
-      // Accordion header click
+      // header click: toggle this accordion, close others
       accordions.forEach(acc => {
         const header = acc.querySelector(".accordion-header");
-        const body = acc.querySelector(".accordion-body");
-        if (!header || !body) return;
+        if (!header) return;
 
         header.addEventListener("click", () => {
           const isOpen = acc.classList.contains("open");
+
           if (isOpen) {
-            // keep at least one open
-            return;
+            // CLOSE this one
+            closeAccordion(acc);
+          } else {
+            // OPEN this one and CLOSE others
+            accordions.forEach(other => {
+              if (other !== acc) closeAccordion(other);
+            });
+            openAccordion(acc);
           }
-          openAccordionById(acc.id);
         });
       });
 
-      // Nav links open sections
+      // nav click: scroll + open target
       const navLinks = document.querySelectorAll(".nav .links a[href^='#']");
       navLinks.forEach(link => {
         link.addEventListener("click", (e) => {
           e.preventDefault();
-          const hash = link.getAttribute("href");
-          const id = hash.substring(1);
+          const id = link.getAttribute("href").substring(1);
           const target = document.getElementById(id);
+          if (!target) return;
 
-          if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "start" });
-            openAccordionById(id);
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+
+          const acc = target.classList.contains("accordion")
+            ? target
+            : target.closest(".accordion");
+
+          if (acc) {
+            accordions.forEach(other => {
+              if (other !== acc) closeAccordion(other);
+            });
+            openAccordion(acc);
           }
         });
       });
 
-      // Hero parallax
+      /* ========================= */
+      /*  HERO PARALLAX            */
+      /* ========================= */
+
       const hero = document.querySelector(".hero");
       if (hero) {
         const strength = 0.04;
@@ -463,6 +492,57 @@
           hero.style.setProperty("--bg-x", "0px");
           hero.style.setProperty("--bg-y", "0px");
         });
+      }
+
+      /* ========================= */
+      /*  BUBBLE PARTICLE BACKGROUND */
+      /* ========================= */
+
+      const canvas = document.getElementById("bubbles-canvas");
+      if (canvas) {
+        const ctx = canvas.getContext("2d");
+
+        function resizeCanvas() {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        }
+        resizeCanvas();
+        window.addEventListener("resize", resizeCanvas);
+
+        const BUBBLE_COUNT = 90;
+
+        let bubbles = Array.from({ length: BUBBLE_COUNT }, () => ({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          r: Math.random() * 2 + 1.0,
+          vx: (Math.random() - 0.5) * 0.25,
+          vy: (Math.random() - 0.5) * 0.25,
+          alpha: Math.random() * 0.5 + 0.3
+        }));
+
+        function animateBubbles() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+          bubbles.forEach(b => {
+            ctx.beginPath();
+            ctx.arc(b.x, b.y, b.r, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(120,180,255,${b.alpha})`;
+            ctx.fill();
+
+            b.x += b.vx;
+            b.y += b.vy;
+
+            // wrap
+            if (b.x < -5) b.x = canvas.width + 5;
+            if (b.x > canvas.width + 5) b.x = -5;
+            if (b.y < -5) b.y = canvas.height + 5;
+            if (b.y > canvas.height + 5) b.y = -5;
+          });
+
+          requestAnimationFrame(animateBubbles);
+        }
+
+        animateBubbles();
       }
     });
   </script>
