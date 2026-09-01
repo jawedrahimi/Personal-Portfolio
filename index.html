@@ -1,414 +1,1432 @@
-<script>
-document.addEventListener("DOMContentLoaded", () => {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  /* ==========================================
-     ALWAYS START AT TOP
-  ========================================== */
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-  if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
-  }
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
 
-  if (window.location.hash) {
-    history.replaceState(
-      null,
-      "",
-      window.location.pathname + window.location.search
-    );
-  }
+  <link rel="stylesheet" href="styles.css">
 
-  window.scrollTo(0, 0);
+  <title>Ahmad Jawed Rahimi | Portfolio</title>
+</head>
 
+<body>
+
+  <!-- Background Effects -->
+  <div class="background-effects"></div>
+
+  <!-- Optional particle canvas -->
+  <canvas id="bubbles-canvas"></canvas>
 
-  /* ==========================================
-     ACCORDIONS
-  ========================================== */
 
-  const accordions = document.querySelectorAll(".accordion");
+  <!-- ================= NAVBAR ================= -->
 
-  function openAccordion(acc) {
-    const body = acc.querySelector(".accordion-body");
+  <header class="navbar">
 
-    if (!body) return;
+    <a href="#home" class="logo">
+      A<span>JR</span>
+    </a>
 
-    acc.classList.add("open");
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Technical Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    body.style.maxHeight = body.scrollHeight + "px";
-    body.style.opacity = "1";
-    body.style.transform = "translateY(0)";
-  }
+  </header>
 
 
-  function closeAccordion(acc) {
-    const body = acc.querySelector(".accordion-body");
+  <main>
 
-    if (!body) return;
 
-    acc.classList.remove("open");
+    <!-- ================= HERO ================= -->
 
-    body.style.maxHeight = "0px";
-    body.style.opacity = "0";
-    body.style.transform = "translateY(-4px)";
-  }
+    <section class="hero" id="home">
 
+      <div class="hero-content">
 
-  /* Start ALL accordions closed */
+        <p class="eyebrow">
+          ELECTRICAL ENGINEERING · COMPUTER SCIENCE · SPACE SYSTEMS
+        </p>
 
-  accordions.forEach(acc => {
+        <h1>
+          Ahmad Jawed <span>Rahimi</span>
+        </h1>
 
-    const body = acc.querySelector(".accordion-body");
+        <h2>
+          Electrical Engineering &amp; Computer Sciences @ UC Berkeley
+        </h2>
 
-    if (!body) return;
+        <p class="hero-location">
+          Berkeley, California
+        </p>
 
-    body.style.maxHeight = "0px";
-    body.style.opacity = "0";
-    body.style.transform = "translateY(-4px)";
+        <p class="hero-description">
+          I build at the intersection of electrical engineering,
+          software, autonomous systems, robotics, and hands-on hardware.
+          I enjoy taking engineering ideas from requirements and design
+          through implementation, testing, debugging, and integration.
+        </p>
 
-  });
+        <div class="hero-buttons">
 
+          <a
+            class="button primary"
+            href="#projects"
+          >
+            View Projects
+          </a>
 
-  /*
-     IMPORTANT:
-     We removed:
+          <a
+            class="button"
+            href="https://www.linkedin.com/in/ajrahimi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
 
-     openAccordionById("about");
+          <a
+            class="button"
+            href="https://github.com/jawedrahimi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
 
-     So About will NOT automatically open.
-  */
+          <a
+            class="button"
+            href="mailto:jawedrahimi@berkeley.edu"
+          >
+            Email
+          </a>
 
+          <a
+            class="button"
+            href="assets/Ahmad_Jawed_Rahimi_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Resume
+          </a>
 
-  /* ==========================================
-     ACCORDION CLICK
-  ========================================== */
+        </div>
 
-  accordions.forEach(acc => {
+      </div>
 
-    const header = acc.querySelector(".accordion-header");
 
-    if (!header) return;
+      <!-- Correct image path -->
+      <div class="hero-image-container">
 
+        <div class="hero-image-glow"></div>
 
-    header.addEventListener("click", () => {
+        <img
+          src="assets/ahmad.png"
+          alt="Portrait of Ahmad Jawed Rahimi"
+          class="hero-image"
+        >
 
-      const isOpen =
-        acc.classList.contains("open");
+      </div>
 
+    </section>
 
-      if (isOpen) {
 
-        closeAccordion(acc);
 
-      } else {
+    <!-- ================= ABOUT ================= -->
 
-        /* Close other accordions */
+    <section class="section" id="about">
 
-        accordions.forEach(other => {
+      <div class="section-heading">
 
-          if (other !== acc) {
-            closeAccordion(other);
-          }
+        <p class="section-label">
+          INTRODUCTION
+        </p>
 
-        });
+        <h2>
+          About Me
+        </h2>
 
+      </div>
 
-        /* Open selected accordion */
 
-        openAccordion(acc);
+      <div class="about-grid">
 
-      }
+        <div class="about-image-container">
 
-    });
+          <img
+            src="assets/ahmad.png"
+            alt="Ahmad Jawed Rahimi"
+            class="about-image"
+          >
 
-  });
+        </div>
 
 
-  /* ==========================================
-     NAVIGATION LINKS
-  ========================================== */
+        <div class="about-content">
 
-  /*
-     This works with BOTH:
+          <p>
+            Hi, I'm Ahmad, an Electrical Engineering &amp; Computer Sciences
+            student at the University of California, Berkeley.
+            My interests include electrical systems, software engineering,
+            embedded systems, robotics, autonomy, artificial intelligence,
+            and space systems engineering.
+          </p>
 
-     .nav .links
+          <p>
+            What excites me most about engineering is taking an idea from
+            theory into something that can actually be built, tested,
+            measured, debugged, and improved.
+          </p>
 
-     and your newer:
+          <p>
+            I enjoy working through the complete engineering process:
+            <strong>
+              requirements → design → analysis → implementation → testing → iteration.
+            </strong>
+          </p>
 
-     .navbar .nav-links
-  */
+          <p>
+            My experience includes electrical and power subsystem work for
+            a lunar rover mission through NASA L’SPACE, automation and
+            hydroponic engineering with Vertical Farming at Berkeley,
+            electrical systems work with UC Berkeley Formula Racing,
+            and software development using Python, C++, Java, Ruby,
+            and web technologies.
+          </p>
 
-  const navLinks = document.querySelectorAll(
-    ".nav .links a[href^='#'], .navbar .nav-links a[href^='#']"
-  );
+          <p>
+            I am especially enthusiastic about hands-on projects where
+            software, electronics, sensors, autonomy, and physical systems
+            come together to solve real-world engineering problems.
+          </p>
 
 
-  navLinks.forEach(link => {
+          <div class="about-tags">
 
-    link.addEventListener("click", e => {
+            <span>Electrical Engineering</span>
+            <span>Computer Science</span>
+            <span>Space Systems</span>
+            <span>Robotics</span>
+            <span>Autonomy</span>
+            <span>AI</span>
+            <span>Hands-On Engineering</span>
 
-      e.preventDefault();
+          </div>
 
+        </div>
 
-      const id =
-        link
-          .getAttribute("href")
-          .substring(1);
+      </div>
 
+    </section>
 
-      const target =
-        document.getElementById(id);
 
 
-      if (!target) return;
+    <!-- ================= HIGHLIGHTS ================= -->
 
+    <section class="section" id="highlights">
 
-      /*
-        Open accordion first if the section
-        is an accordion.
-      */
+      <div class="section-heading">
 
-      const acc =
-        target.classList.contains("accordion")
-          ? target
-          : target.closest(".accordion");
+        <p class="section-label">
+          SELECTED WORK
+        </p>
 
+        <h2>
+          Highlights
+        </h2>
 
-      if (acc) {
+        <p class="section-description">
+          Selected experiences representing my interests across
+          electrical engineering, software, robotics, autonomy,
+          and space systems.
+        </p>
 
-        accordions.forEach(other => {
+      </div>
 
-          if (other !== acc) {
-            closeAccordion(other);
-          }
 
-        });
+      <div class="highlight-grid">
 
-        openAccordion(acc);
 
-      }
+        <!-- NASA MCA -->
 
+        <article class="highlight-card">
 
-      /*
-        Then smoothly scroll to the section.
-      */
+          <div class="highlight-number">
+            01
+          </div>
 
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
-      });
+          <p class="highlight-organization">
+            NASA L’SPACE
+          </p>
 
-    });
+          <h3>
+            Lunar Rover Power Systems
+          </h3>
 
-  });
+          <p>
+            Supporting electrical and power subsystem design for a lunar
+            south pole rover mission, including solar generation,
+            lithium-ion energy storage, power distribution,
+            BMS monitoring, safe-power modes, fault recovery,
+            and subsystem power allocation.
+          </p>
 
+          <div class="tags">
+            <span>Power Systems</span>
+            <span>Electrical Engineering</span>
+            <span>Space Systems</span>
+          </div>
 
-  /* ==========================================
-     HERO PARALLAX
-  ========================================== */
+        </article>
 
-  const hero =
-    document.querySelector(".hero");
 
 
-  if (hero) {
+        <!-- NASA NPWEE -->
 
-    const strength = 0.04;
+        <article class="highlight-card">
 
+          <div class="highlight-number">
+            02
+          </div>
 
-    hero.addEventListener("mousemove", e => {
+          <p class="highlight-organization">
+            NASA L’SPACE NPWEE
+          </p>
 
-      const rect =
-        hero.getBoundingClientRect();
+          <h3>
+            Autonomy, AI &amp; Robotics
+          </h3>
 
+          <p>
+            Selected for the Sep–Dec 2026 program to contribute to
+            lunar mission concept development focused on autonomous
+            navigation, obstacle avoidance, sensor integration,
+            autonomy architecture, AI-enabled decision-making,
+            and robotic surface operations.
+          </p>
 
-      const x =
-        e.clientX -
-        rect.left -
-        rect.width / 2;
+          <div class="tags">
+            <span>Autonomy</span>
+            <span>AI</span>
+            <span>Robotics</span>
+          </div>
 
+        </article>
 
-      const y =
-        e.clientY -
-        rect.top -
-        rect.height / 2;
 
 
-      hero.style.setProperty(
-        "--bg-x",
-        `${-x * strength}px`
-      );
+        <!-- Vertical Farming -->
 
+        <article class="highlight-card">
 
-      hero.style.setProperty(
-        "--bg-y",
-        `${-y * strength}px`
-      );
+          <div class="highlight-number">
+            03
+          </div>
 
-    });
+          <p class="highlight-organization">
+            UC BERKELEY
+          </p>
 
+          <h3>
+            Vertical Farming Engineering
+          </h3>
 
-    hero.addEventListener("mouseleave", () => {
+          <p>
+            Contributing to engineering projects involving modular
+            hydroponics, sensing, automation, robotics, prototyping,
+            design, and system integration.
+          </p>
 
-      hero.style.setProperty(
-        "--bg-x",
-        "0px"
-      );
+          <div class="tags">
+            <span>Automation</span>
+            <span>Sensors</span>
+            <span>Hydroponics</span>
+          </div>
 
-      hero.style.setProperty(
-        "--bg-y",
-        "0px"
-      );
+        </article>
 
-    });
 
-  }
 
+        <!-- Formula Racing -->
 
-  /* ==========================================
-     BUBBLE PARTICLE BACKGROUND
-  ========================================== */
+        <article class="highlight-card">
 
-  const canvas =
-    document.getElementById("bubbles-canvas");
+          <div class="highlight-number">
+            04
+          </div>
 
+          <p class="highlight-organization">
+            FORMULA RACING
+          </p>
 
-  if (canvas) {
+          <h3>
+            Race-Car Electrical Systems
+          </h3>
 
-    const ctx =
-      canvas.getContext("2d");
+          <p>
+            Designed and constructed high-reliability electrical
+            harnessing for a Formula-style race car and performed
+            testing and validation resulting in a failure rate below 1%.
+          </p>
 
+          <div class="tags">
+            <span>Electrical</span>
+            <span>Harness Design</span>
+            <span>Testing</span>
+          </div>
 
-    function resizeCanvas() {
+        </article>
 
-      canvas.width =
-        window.innerWidth;
 
-      canvas.height =
-        window.innerHeight;
+      </div>
 
-    }
+    </section>
 
 
-    resizeCanvas();
 
+    <!-- ================= EDUCATION ================= -->
 
-    window.addEventListener(
-      "resize",
-      resizeCanvas
-    );
+    <section class="section" id="education">
 
+      <div class="section-heading">
 
-    const BUBBLE_COUNT = 90;
+        <p class="section-label">
+          ACADEMICS
+        </p>
 
+        <h2>
+          Education
+        </h2>
 
-    const bubbles =
-      Array.from(
-        { length: BUBBLE_COUNT },
-        () => ({
+      </div>
 
-          x:
-            Math.random() *
-            canvas.width,
 
-          y:
-            Math.random() *
-            canvas.height,
+      <div class="education-card">
 
-          r:
-            Math.random() *
-            2 + 1,
+        <div class="education-main">
 
-          vx:
-            (Math.random() - 0.5) *
-            0.25,
+          <div>
 
-          vy:
-            (Math.random() - 0.5) *
-            0.25,
+            <p class="education-school">
+              University of California, Berkeley
+            </p>
 
-          alpha:
-            Math.random() *
-            0.5 + 0.3
+            <h3>
+              B.S. Electrical Engineering &amp; Computer Sciences
+            </h3>
 
-        })
-      );
+            <p class="education-meta">
+              Berkeley, California
+            </p>
 
+          </div>
 
-    function animateBubbles() {
+          <div class="education-date">
+            Expected December 2026
+          </div>
 
-      ctx.clearRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-      );
+        </div>
 
 
-      bubbles.forEach(b => {
+        <div class="education-divider"></div>
 
-        ctx.beginPath();
 
-        ctx.arc(
-          b.x,
-          b.y,
-          b.r,
-          0,
-          Math.PI * 2
-        );
+        <div class="coursework">
 
+          <h4>
+            Relevant Coursework
+          </h4>
 
-        ctx.fillStyle =
-          `rgba(120,180,255,${b.alpha})`;
+          <div class="course-grid">
 
+            <span>Digital Design &amp; Integrated Circuits (FPGA)</span>
 
-        ctx.fill();
+            <span>Circuit Analysis</span>
 
+            <span>
+              Designing Information Devices &amp; Systems I
+            </span>
 
-        b.x += b.vx;
-        b.y += b.vy;
+            <span>
+              Designing Information Devices &amp; Systems II
+            </span>
 
+            <span>Machine Structures</span>
 
-        /* Wrap around screen */
+            <span>Artificial Intelligence</span>
 
-        if (b.x < -5) {
-          b.x = canvas.width + 5;
-        }
+            <span>Linear Algebra</span>
 
-        if (b.x > canvas.width + 5) {
-          b.x = -5;
-        }
+            <span>Differential Equations</span>
 
-        if (b.y < -5) {
-          b.y = canvas.height + 5;
-        }
+            <span>Discrete Mathematics</span>
 
-        if (b.y > canvas.height + 5) {
-          b.y = -5;
-        }
+            <span>Probability Theory</span>
 
-      });
+          </div>
 
+        </div>
 
-      requestAnimationFrame(
-        animateBubbles
-      );
+      </div>
 
-    }
+    </section>
 
 
-    animateBubbles();
 
-  }
+    <!-- ================= EXPERIENCE ================= -->
 
+    <section class="section" id="experience">
 
-  /* ==========================================
-     FINAL TOP RESET
-  ========================================== */
+      <div class="section-heading">
 
-  requestAnimationFrame(() => {
+        <p class="section-label">
+          PROFESSIONAL EXPERIENCE
+        </p>
 
-    window.scrollTo(0, 0);
+        <h2>
+          Experience
+        </h2>
 
-  });
+      </div>
 
-});
-</script>
+
+      <div class="timeline">
+
+
+        <!-- NASA MCA -->
+
+        <article class="timeline-item">
+
+          <div class="timeline-marker"></div>
+
+          <div class="experience-card">
+
+            <div class="experience-header">
+
+              <div>
+
+                <p class="experience-company">
+                  NASA L’SPACE Program
+                </p>
+
+                <h3>
+                  Electrical Engineer — Mission Concept Academy
+                </h3>
+
+              </div>
+
+              <p class="experience-date">
+                Jun 2026 – Sep 2026
+              </p>
+
+            </div>
+
+
+            <p class="experience-location">
+              Remote
+            </p>
+
+
+            <ul>
+
+              <li>
+                Support electrical and power subsystem design for
+                a lunar south pole rover mission investigating
+                volatile characterization, lunar interior science,
+                and in-situ resource utilization feasibility.
+              </li>
+
+              <li>
+                Develop Power Subsystem Preliminary Design Review
+                deliverables covering requirements, architecture,
+                power-budget assumptions, verification,
+                procurement, and fault-recovery planning.
+              </li>
+
+              <li>
+                Analyze solar generation, lithium-ion storage,
+                PDU distribution, BMS monitoring, safe-power modes,
+                and cross-subsystem loads.
+              </li>
+
+              <li>
+                Coordinate with mechanical, payload, thermal,
+                and command and data handling teams on interfaces,
+                power allocation, and integration risks.
+              </li>
+
+            </ul>
+
+
+            <div class="tags">
+
+              <span>Power Systems</span>
+              <span>Electrical Engineering</span>
+              <span>PDR</span>
+              <span>Systems Engineering</span>
+              <span>Space Systems</span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- NASA NPWEE -->
+
+        <article class="timeline-item">
+
+          <div class="timeline-marker"></div>
+
+          <div class="experience-card">
+
+            <div class="experience-header">
+
+              <div>
+
+                <p class="experience-company">
+                  NASA L’SPACE NPWEE
+                </p>
+
+                <h3>
+                  Selected Autonomy, AI &amp; Robotics Contributor
+                </h3>
+
+              </div>
+
+              <p class="experience-date">
+                Sep 2026 – Dec 2026
+              </p>
+
+            </div>
+
+
+            <p class="experience-location">
+              Remote
+            </p>
+
+
+            <ul>
+
+              <li>
+                Selected to contribute to lunar mission concept
+                development focused on rover autonomy,
+                AI-enabled decision-making,
+                and robotic surface operations.
+              </li>
+
+              <li>
+                Planned technical scope includes autonomous navigation,
+                obstacle avoidance, sensor integration,
+                autonomy architecture, requirements analysis,
+                and mission risk assessment.
+              </li>
+
+            </ul>
+
+
+            <div class="tags">
+
+              <span>Autonomy</span>
+              <span>Artificial Intelligence</span>
+              <span>Robotics</span>
+              <span>Navigation</span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- Vertical Farming -->
+
+        <article class="timeline-item">
+
+          <div class="timeline-marker"></div>
+
+          <div class="experience-card">
+
+            <div class="experience-header">
+
+              <div>
+
+                <p class="experience-company">
+                  Vertical Farming at Berkeley
+                </p>
+
+                <h3>
+                  Engineering Division
+                </h3>
+
+              </div>
+
+              <p class="experience-date">
+                Aug 2025 – Present
+              </p>
+
+            </div>
+
+
+            <p class="experience-location">
+              Berkeley, California
+            </p>
+
+
+            <ul>
+
+              <li>
+                Design engineering solutions for vertical farming
+                systems with emphasis on sustainability,
+                automation, and system efficiency.
+              </li>
+
+              <li>
+                Develop and debug software for automation,
+                robotics, and sensor-based crop monitoring.
+              </li>
+
+              <li>
+                Prototype hydroponic systems including nutrient
+                and water delivery mechanisms.
+              </li>
+
+              <li>
+                Collaborate across engineering, programming,
+                and plant science to move projects from design
+                and modeling through manufacturing,
+                testing, and implementation.
+              </li>
+
+            </ul>
+
+
+            <div class="tags">
+
+              <span>Automation</span>
+              <span>Robotics</span>
+              <span>Sensors</span>
+              <span>Hydroponics</span>
+              <span>Prototyping</span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- Helping Hands -->
+
+        <article class="timeline-item">
+
+          <div class="timeline-marker"></div>
+
+          <div class="experience-card">
+
+            <div class="experience-header">
+
+              <div>
+
+                <p class="experience-company">
+                  Helping Hands Corporation
+                </p>
+
+                <h3>
+                  Software Engineer Intern
+                </h3>
+
+              </div>
+
+              <p class="experience-date">
+                Jun 2025 – Aug 2025
+              </p>
+
+            </div>
+
+
+            <p class="experience-location">
+              Remote
+            </p>
+
+
+            <ul>
+
+              <li>
+                Designed and tested software modules for intelligent
+                task-automation systems and experimental
+                OS-level technologies.
+              </li>
+
+              <li>
+                Developed software components in Python and C++
+                that interfaced with operating-system functionality.
+              </li>
+
+              <li>
+                Participated in code reviews, debugging,
+                and agile development while researching technologies
+                in automation, AI, and systems programming.
+              </li>
+
+            </ul>
+
+
+            <div class="tags">
+
+              <span>Python</span>
+              <span>C++</span>
+              <span>Systems</span>
+              <span>Automation</span>
+              <span>AI</span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- Formula Racing -->
+
+        <article class="timeline-item">
+
+          <div class="timeline-marker"></div>
+
+          <div class="experience-card">
+
+            <div class="experience-header">
+
+              <div>
+
+                <p class="experience-company">
+                  UC Berkeley Formula Racing
+                </p>
+
+                <h3>
+                  Electrical Subteam — Harness
+                </h3>
+
+              </div>
+
+              <p class="experience-date">
+                Aug 2024 – Dec 2025
+              </p>
+
+            </div>
+
+
+            <p class="experience-location">
+              Berkeley, California
+            </p>
+
+
+            <ul>
+
+              <li>
+                Designed and constructed high-performance electrical
+                harnessing for a Formula-style race car.
+              </li>
+
+              <li>
+                Performed electrical testing and validation,
+                achieving a failure rate below 1%.
+              </li>
+
+            </ul>
+
+
+            <div class="tags">
+
+              <span>Electrical Systems</span>
+              <span>Harness Design</span>
+              <span>Testing</span>
+              <span>Reliability</span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- Tutor -->
+
+        <article class="timeline-item">
+
+          <div class="timeline-marker"></div>
+
+          <div class="experience-card">
+
+            <div class="experience-header">
+
+              <div>
+
+                <p class="experience-company">
+                  Folsom Lake College
+                </p>
+
+                <h3>
+                  Programming, Mathematics &amp; Physics Tutor
+                </h3>
+
+              </div>
+
+              <p class="experience-date">
+                Apr 2023 – Jan 2025
+              </p>
+
+            </div>
+
+
+            <p class="experience-location">
+              Folsom, California
+            </p>
+
+
+            <ul>
+
+              <li>
+                Tutored students in Calculus, Physics,
+                C++, Java, and Python.
+              </li>
+
+              <li>
+                Mentored students in technical problem-solving,
+                academic development, teamwork,
+                and study strategies.
+              </li>
+
+            </ul>
+
+
+            <div class="tags">
+
+              <span>Programming</span>
+              <span>Mathematics</span>
+              <span>Physics</span>
+              <span>Mentoring</span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- Elections -->
+
+        <article class="timeline-item">
+
+          <div class="timeline-marker"></div>
+
+          <div class="experience-card">
+
+            <div class="experience-header">
+
+              <div>
+
+                <p class="experience-company">
+                  El Dorado County Elections Department
+                </p>
+
+                <h3>
+                  IT &amp; Student Assistant
+                </h3>
+
+              </div>
+
+              <p class="experience-date">
+                Apr 2022 – Dec 2024
+              </p>
+
+            </div>
+
+
+            <p class="experience-location">
+              Placerville, California
+            </p>
+
+
+            <ul>
+
+              <li>
+                Provided technical support for voting machines,
+                ballot tabulators, voter-registration systems,
+                and election-related hardware and software.
+              </li>
+
+              <li>
+                Installed, configured, maintained,
+                and troubleshot election technology
+                under time-sensitive conditions.
+              </li>
+
+            </ul>
+
+
+            <div class="tags">
+
+              <span>IT Support</span>
+              <span>Hardware</span>
+              <span>Troubleshooting</span>
+              <span>Operations</span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= PROJECTS ================= -->
+
+    <section class="section" id="projects">
+
+      <div class="section-heading">
+
+        <p class="section-label">
+          ENGINEERING &amp; SOFTWARE
+        </p>
+
+        <h2>
+          Projects
+        </h2>
+
+        <p class="section-description">
+          Selected projects spanning software,
+          algorithms, robotics, circuits,
+          and engineering design.
+        </p>
+
+      </div>
+
+
+      <div class="project-grid">
+
+
+        <article class="project-card">
+
+          <p class="project-type">
+            SOFTWARE · PYTHON
+          </p>
+
+          <h3>
+            Scheme Interpreter
+          </h3>
+
+          <p>
+            Built an interpreter for the Scheme programming language,
+            implementing parsing, evaluation, environments,
+            recursive expressions, and REPL behavior.
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>Interpreters</span>
+            <span>Parsing</span>
+          </div>
+
+        </article>
+
+
+
+        <article class="project-card">
+
+          <p class="project-type">
+            SOFTWARE · JAVA
+          </p>
+
+          <h3>
+            Procedural World Generator
+          </h3>
+
+          <p>
+            Developed a pseudorandom 2D world exploration engine
+            with dynamic environments, navigable layouts,
+            deterministic seed generation,
+            HUD functionality, and save/load support.
+          </p>
+
+          <div class="tags">
+            <span>Java</span>
+            <span>Algorithms</span>
+            <span>Procedural Generation</span>
+          </div>
+
+        </article>
+
+
+
+        <article class="project-card">
+
+          <p class="project-type">
+            ROBOTICS · C++
+          </p>
+
+          <h3>
+            Robot Evolution
+          </h3>
+
+          <p>
+            Created a robot simulation using evolutionary algorithms,
+            environmental sensing, map generation,
+            fitness evaluation, and reproduction logic.
+          </p>
+
+          <div class="tags">
+            <span>C++</span>
+            <span>Robotics</span>
+            <span>Evolutionary Algorithms</span>
+          </div>
+
+        </article>
+
+
+
+        <article class="project-card">
+
+          <p class="project-type">
+            FULL STACK · RUBY ON RAILS
+          </p>
+
+          <h3>
+            ActionMap
+          </h3>
+
+          <p>
+            Built features for discovering representatives
+            and political news, integrated Google Civic,
+            Geocodio, and News APIs,
+            and implemented issue taxonomy and article workflows.
+          </p>
+
+          <div class="tags">
+            <span>Ruby on Rails</span>
+            <span>REST APIs</span>
+            <span>RSpec</span>
+          </div>
+
+        </article>
+
+
+
+        <article class="project-card">
+
+          <p class="project-type">
+            SOFTWARE QUALITY
+          </p>
+
+          <h3>
+            Testing &amp; Continuous Integration
+          </h3>
+
+          <p>
+            Developed RSpec and WebMock test suites,
+            configured GitHub Actions CI,
+            enforced RuboCop and Haml-Lint,
+            and improved application coverage.
+          </p>
+
+          <div class="tags">
+            <span>RSpec</span>
+            <span>WebMock</span>
+            <span>GitHub Actions</span>
+          </div>
+
+        </article>
+
+
+
+        <article class="project-card">
+
+          <p class="project-type">
+            ELECTRICAL ENGINEERING
+          </p>
+
+          <h3>
+            Treble Boost Effect Circuit
+          </h3>
+
+          <p>
+            Designed and built an op-amp-based audio treble boost circuit,
+            calculated active high-pass filter components,
+            measured frequency response,
+            and optimized gain.
+          </p>
+
+          <div class="tags">
+            <span>Op-Amps</span>
+            <span>Filters</span>
+            <span>Circuits</span>
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= SKILLS ================= -->
+
+    <section class="section" id="skills">
+
+      <div class="section-heading">
+
+        <p class="section-label">
+          TOOLKIT
+        </p>
+
+        <h2>
+          Technical Skills
+        </h2>
+
+      </div>
+
+
+      <div class="skills-grid">
+
+
+        <article class="skill-card">
+
+          <h3>
+            Programming Languages
+          </h3>
+
+          <div class="skill-tags">
+
+            <span>C</span>
+            <span>C++</span>
+            <span>Python</span>
+            <span>Java</span>
+            <span>JavaScript</span>
+            <span>Ruby</span>
+            <span>Scheme</span>
+            <span>SQL</span>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="skill-card">
+
+          <h3>
+            Web &amp; Software
+          </h3>
+
+          <div class="skill-tags">
+
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Express.js</span>
+            <span>MongoDB</span>
+            <span>Ruby on Rails</span>
+            <span>REST APIs</span>
+            <span>HTML/CSS</span>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="skill-card">
+
+          <h3>
+            Electrical &amp; Hardware
+          </h3>
+
+          <div class="skill-tags">
+
+            <span>FPGA</span>
+            <span>Arduino</span>
+            <span>Op-Amps</span>
+            <span>Active Filters</span>
+            <span>Electrical Harnesses</span>
+            <span>Sensor Systems</span>
+            <span>Power Systems</span>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="skill-card">
+
+          <h3>
+            Engineering Tools
+          </h3>
+
+          <div class="skill-tags">
+
+            <span>MATLAB</span>
+            <span>AutoCAD</span>
+            <span>SolidWorks</span>
+            <span>Fusion 360</span>
+            <span>Git/GitHub</span>
+            <span>Linux</span>
+            <span>Docker</span>
+            <span>LaTeX</span>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="skill-card">
+
+          <h3>
+            Testing &amp; Development
+          </h3>
+
+          <div class="skill-tags">
+
+            <span>RSpec</span>
+            <span>WebMock</span>
+            <span>GitHub Actions</span>
+            <span>RuboCop</span>
+            <span>Haml-Lint</span>
+            <span>Agile/Scrum</span>
+
+          </div>
+
+        </article>
+
+
+
+        <article class="skill-card">
+
+          <h3>
+            Data &amp; Analysis
+          </h3>
+
+          <div class="skill-tags">
+
+            <span>NumPy</span>
+            <span>Pandas</span>
+            <span>SQL</span>
+            <span>Data Analysis</span>
+            <span>Visualization</span>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section class="contact-section" id="contact">
+
+      <p class="section-label">
+        GET IN TOUCH
+      </p>
+
+      <h2>
+        Let's Connect
+      </h2>
+
+      <p>
+        I'm interested in opportunities involving electrical engineering,
+        embedded systems, robotics, autonomy, AI,
+        software engineering, and space systems.
+      </p>
+
+
+      <div class="contact-links">
+
+        <a href="mailto:jawedrahimi@berkeley.edu">
+          jawedrahimi@berkeley.edu
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/ajrahimi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+
+        <a
+          href="https://github.com/jawedrahimi"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+
+        <a
+          href="assets/Ahmad_Jawed_Rahimi_CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Resume
+        </a>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+      <p>
+        © 2026 Ahmad Jawed Rahimi
+      </p>
+
+      <a href="#home">
+        Back to top ↑
+      </a>
+
+    </footer>
+
+
+  </main>
+
+
+  <!-- External JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
