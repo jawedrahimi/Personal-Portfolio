@@ -9,221 +9,234 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
     rel="stylesheet"
   >
 
   <link rel="stylesheet" href="styles.css">
 
-  <title>Ahmad Jawed Rahimi | Portfolio</title>
+  <title>Ahmad Jawed Rahimi | EECS Portfolio</title>
 </head>
 
 <body>
 
-  <!-- Background Effects -->
-  <div class="background-effects"></div>
-
-  <!-- Optional particle canvas -->
-  <canvas id="bubbles-canvas"></canvas>
-
-
-  <!-- ================= NAVBAR ================= -->
+  <div class="noise"></div>
+  <div class="cursor-glow"></div>
 
   <header class="navbar">
-
     <a href="#home" class="logo">
-      A<span>JR</span>
+      AJR<span>/26</span>
     </a>
 
     <nav class="nav-links">
-      <a href="#about">About</a>
-      <a href="#highlights">Highlights</a>
-      <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Technical Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#about">01 ABOUT</a>
+      <a href="#systems">02 SYSTEMS</a>
+      <a href="#experience">03 EXPERIENCE</a>
+      <a href="#projects">04 BUILDS</a>
+      <a href="#skills">05 STACK</a>
+      <a href="#contact">06 CONTACT</a>
     </nav>
-
   </header>
 
 
   <main>
 
-
-    <!-- ================= HERO ================= -->
+    <!-- =====================================
+         HERO
+    ====================================== -->
 
     <section class="hero" id="home">
 
-      <div class="hero-content">
+      <div class="hero-grid">
 
-        <p class="eyebrow">
-          ELECTRICAL ENGINEERING · COMPUTER SCIENCE · SPACE SYSTEMS
-        </p>
+        <div class="hero-copy">
 
-        <h1>
-          Ahmad Jawed <span>Rahimi</span>
-        </h1>
+          <div class="system-status">
+            <span class="status-dot"></span>
+            SYSTEM STATUS: ONLINE
+          </div>
 
-        <h2>
-          Electrical Engineering &amp; Computer Sciences @ UC Berkeley
-        </h2>
+          <p class="hero-kicker">
+            ELECTRICAL ENGINEERING // COMPUTER SCIENCE // SPACE SYSTEMS
+          </p>
 
-        <p class="hero-location">
-          Berkeley, California
-        </p>
+          <h1>
+            AHMAD
+            <span>JAWED</span>
+            RAHIMI
+          </h1>
 
-        <p class="hero-description">
-          I build at the intersection of electrical engineering,
-          software, autonomous systems, robotics, and hands-on hardware.
-          I enjoy taking engineering ideas from requirements and design
-          through implementation, testing, debugging, and integration.
-        </p>
+          <p class="hero-role">
+            Electrical Engineering &amp; Computer Sciences
+            <br>
+            University of California, Berkeley
+          </p>
 
-        <div class="hero-buttons">
+          <p class="hero-description">
+            I design and build systems across power engineering,
+            software, autonomy, robotics, embedded systems,
+            and space technology.
+          </p>
 
-          <a
-            class="button primary"
-            href="#projects"
-          >
-            View Projects
-          </a>
+          <div class="hero-actions">
 
-          <a
-            class="button"
-            href="https://www.linkedin.com/in/ajrahimi"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            LinkedIn
-          </a>
+            <a href="#projects" class="future-btn primary">
+              VIEW BUILDS
+            </a>
 
-          <a
-            class="button"
-            href="https://github.com/jawedrahimi"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            GitHub
-          </a>
+            <a
+              href="assets/Ahmad_Jawed_Rahimi_CV.pdf"
+              class="future-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              RESUME
+            </a>
 
-          <a
-            class="button"
-            href="mailto:jawedrahimi@berkeley.edu"
-          >
-            Email
-          </a>
+            <a
+              href="https://github.com/jawedrahimi"
+              class="future-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GITHUB
+            </a>
 
-          <a
-            class="button"
-            href="assets/Ahmad_Jawed_Rahimi_CV.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Resume
-          </a>
+            <a
+              href="https://www.linkedin.com/in/ajrahimi"
+              class="future-btn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LINKEDIN
+            </a>
+
+          </div>
 
         </div>
 
-      </div>
 
+        <div class="hero-visual">
 
-      <!-- Correct image path -->
-      <div class="hero-image-container">
+          <div class="hud-corner hud-top-left"></div>
+          <div class="hud-corner hud-top-right"></div>
+          <div class="hud-corner hud-bottom-left"></div>
+          <div class="hud-corner hud-bottom-right"></div>
 
-        <div class="hero-image-glow"></div>
-
-        <img
-          src="assets/ahmad.png"
-          alt="Portrait of Ahmad Jawed Rahimi"
-          class="hero-image"
-        >
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ================= ABOUT ================= -->
-
-    <section class="section" id="about">
-
-      <div class="section-heading">
-
-        <p class="section-label">
-          INTRODUCTION
-        </p>
-
-        <h2>
-          About Me
-        </h2>
-
-      </div>
-
-
-      <div class="about-grid">
-
-        <div class="about-image-container">
+          <div class="image-scanner"></div>
 
           <img
             src="assets/ahmad.png"
             alt="Ahmad Jawed Rahimi"
-            class="about-image"
+            class="hero-image"
           >
 
+          <div class="image-label top-label">
+            SUBJECT_001
+          </div>
+
+          <div class="image-label bottom-label">
+            EECS // BERKELEY
+          </div>
+
+        </div>
+
+      </div>
+
+
+      <div class="signal-strip">
+
+        <span>CURRENT SIGNAL</span>
+
+        <div class="signal-content">
+          NASA L’SPACE
+          <span>//</span>
+          VERTICAL FARMING
+          <span>//</span>
+          UC BERKELEY EECS
+          <span>//</span>
+          AUTONOMY + AI + ROBOTICS
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         ABOUT
+    ====================================== -->
+
+    <section class="section" id="about">
+
+      <div class="section-index">
+        01
+      </div>
+
+      <div class="section-content">
+
+        <p class="section-kicker">
+          ENGINEERING PROFILE
+        </p>
+
+        <h2>
+          ABOUT
+        </h2>
+
+        <div class="about-layout">
+
+          <div class="about-lead">
+            I like engineering projects that move from
+            <span>theory to hardware.</span>
+          </div>
+
+          <div class="about-copy">
+
+            <p>
+              I’m an Electrical Engineering &amp; Computer Sciences student
+              at UC Berkeley with interests across electrical systems,
+              software engineering, robotics, autonomy, artificial intelligence,
+              embedded systems, and space systems engineering.
+            </p>
+
+            <p>
+              I’m most interested in hands-on work where multiple disciplines
+              come together: power electronics, sensors, control systems,
+              software, mechanical constraints, and system integration.
+            </p>
+
+            <p>
+              My engineering process is simple:
+              understand the requirements, build a model,
+              prototype the solution, test it, find what fails,
+              and improve the system.
+            </p>
+
+          </div>
+
         </div>
 
 
-        <div class="about-content">
+        <div class="profile-metrics">
 
-          <p>
-            Hi, I'm Ahmad, an Electrical Engineering &amp; Computer Sciences
-            student at the University of California, Berkeley.
-            My interests include electrical systems, software engineering,
-            embedded systems, robotics, autonomy, artificial intelligence,
-            and space systems engineering.
-          </p>
+          <div class="metric">
+            <span class="metric-label">DISCIPLINE</span>
+            <strong>EE + CS</strong>
+          </div>
 
-          <p>
-            What excites me most about engineering is taking an idea from
-            theory into something that can actually be built, tested,
-            measured, debugged, and improved.
-          </p>
+          <div class="metric">
+            <span class="metric-label">FOCUS</span>
+            <strong>SPACE / AUTONOMY</strong>
+          </div>
 
-          <p>
-            I enjoy working through the complete engineering process:
-            <strong>
-              requirements → design → analysis → implementation → testing → iteration.
-            </strong>
-          </p>
+          <div class="metric">
+            <span class="metric-label">STYLE</span>
+            <strong>HANDS-ON</strong>
+          </div>
 
-          <p>
-            My experience includes electrical and power subsystem work for
-            a lunar rover mission through NASA L’SPACE, automation and
-            hydroponic engineering with Vertical Farming at Berkeley,
-            electrical systems work with UC Berkeley Formula Racing,
-            and software development using Python, C++, Java, Ruby,
-            and web technologies.
-          </p>
-
-          <p>
-            I am especially enthusiastic about hands-on projects where
-            software, electronics, sensors, autonomy, and physical systems
-            come together to solve real-world engineering problems.
-          </p>
-
-
-          <div class="about-tags">
-
-            <span>Electrical Engineering</span>
-            <span>Computer Science</span>
-            <span>Space Systems</span>
-            <span>Robotics</span>
-            <span>Autonomy</span>
-            <span>AI</span>
-            <span>Hands-On Engineering</span>
-
+          <div class="metric">
+            <span class="metric-label">BASE</span>
+            <strong>UC BERKELEY</strong>
           </div>
 
         </div>
@@ -233,250 +246,723 @@
     </section>
 
 
+    <!-- =====================================
+         ACTIVE SYSTEMS
+    ====================================== -->
 
-    <!-- ================= HIGHLIGHTS ================= -->
+    <section class="section" id="systems">
 
-    <section class="section" id="highlights">
+      <div class="section-index">
+        02
+      </div>
 
-      <div class="section-heading">
+      <div class="section-content">
 
-        <p class="section-label">
-          SELECTED WORK
+        <p class="section-kicker">
+          ACTIVE SYSTEMS
         </p>
 
         <h2>
-          Highlights
+          CURRENTLY
         </h2>
 
-        <p class="section-description">
-          Selected experiences representing my interests across
-          electrical engineering, software, robotics, autonomy,
-          and space systems.
-        </p>
 
-      </div>
+        <div class="systems-grid">
 
+          <article class="system-card">
 
-      <div class="highlight-grid">
+            <div class="system-card-top">
+              <span>SYS_01</span>
+              <span class="active-text">ACTIVE</span>
+            </div>
 
+            <h3>
+              NASA L’SPACE
+            </h3>
 
-        <!-- NASA MCA -->
+            <p class="system-subtitle">
+              Mission Concept Academy
+            </p>
 
-        <article class="highlight-card">
+            <p>
+              Electrical and power subsystem development for a lunar
+              south pole rover mission.
+            </p>
 
-          <div class="highlight-number">
-            01
-          </div>
+            <div class="system-readouts">
+              <span>POWER SYSTEMS</span>
+              <span>PDR</span>
+              <span>LUNAR SYSTEMS</span>
+            </div>
 
-          <p class="highlight-organization">
-            NASA L’SPACE
-          </p>
-
-          <h3>
-            Lunar Rover Power Systems
-          </h3>
-
-          <p>
-            Supporting electrical and power subsystem design for a lunar
-            south pole rover mission, including solar generation,
-            lithium-ion energy storage, power distribution,
-            BMS monitoring, safe-power modes, fault recovery,
-            and subsystem power allocation.
-          </p>
-
-          <div class="tags">
-            <span>Power Systems</span>
-            <span>Electrical Engineering</span>
-            <span>Space Systems</span>
-          </div>
-
-        </article>
+          </article>
 
 
+          <article class="system-card">
 
-        <!-- NASA NPWEE -->
+            <div class="system-card-top">
+              <span>SYS_02</span>
+              <span class="queued-text">SELECTED</span>
+            </div>
 
-        <article class="highlight-card">
+            <h3>
+              NASA L’SPACE NPWEE
+            </h3>
 
-          <div class="highlight-number">
-            02
-          </div>
+            <p class="system-subtitle">
+              Autonomy, AI &amp; Robotics
+            </p>
 
-          <p class="highlight-organization">
-            NASA L’SPACE NPWEE
-          </p>
+            <p>
+              Selected for lunar mission concept work involving rover
+              autonomy, sensor integration, navigation, and robotic operations.
+            </p>
 
-          <h3>
-            Autonomy, AI &amp; Robotics
-          </h3>
+            <div class="system-readouts">
+              <span>AUTONOMY</span>
+              <span>AI</span>
+              <span>ROBOTICS</span>
+            </div>
 
-          <p>
-            Selected for the Sep–Dec 2026 program to contribute to
-            lunar mission concept development focused on autonomous
-            navigation, obstacle avoidance, sensor integration,
-            autonomy architecture, AI-enabled decision-making,
-            and robotic surface operations.
-          </p>
-
-          <div class="tags">
-            <span>Autonomy</span>
-            <span>AI</span>
-            <span>Robotics</span>
-          </div>
-
-        </article>
+          </article>
 
 
+          <article class="system-card">
 
-        <!-- Vertical Farming -->
+            <div class="system-card-top">
+              <span>SYS_03</span>
+              <span class="active-text">ACTIVE</span>
+            </div>
 
-        <article class="highlight-card">
+            <h3>
+              Vertical Farming at Berkeley
+            </h3>
 
-          <div class="highlight-number">
-            03
-          </div>
+            <p class="system-subtitle">
+              Engineering Division
+            </p>
 
-          <p class="highlight-organization">
-            UC BERKELEY
-          </p>
+            <p>
+              Automation, robotics, sensing, hydroponics,
+              prototyping, and interdisciplinary system integration.
+            </p>
 
-          <h3>
-            Vertical Farming Engineering
-          </h3>
+            <div class="system-readouts">
+              <span>AUTOMATION</span>
+              <span>SENSORS</span>
+              <span>HYDROPONICS</span>
+            </div>
 
-          <p>
-            Contributing to engineering projects involving modular
-            hydroponics, sensing, automation, robotics, prototyping,
-            design, and system integration.
-          </p>
+          </article>
 
-          <div class="tags">
-            <span>Automation</span>
-            <span>Sensors</span>
-            <span>Hydroponics</span>
-          </div>
-
-        </article>
-
-
-
-        <!-- Formula Racing -->
-
-        <article class="highlight-card">
-
-          <div class="highlight-number">
-            04
-          </div>
-
-          <p class="highlight-organization">
-            FORMULA RACING
-          </p>
-
-          <h3>
-            Race-Car Electrical Systems
-          </h3>
-
-          <p>
-            Designed and constructed high-reliability electrical
-            harnessing for a Formula-style race car and performed
-            testing and validation resulting in a failure rate below 1%.
-          </p>
-
-          <div class="tags">
-            <span>Electrical</span>
-            <span>Harness Design</span>
-            <span>Testing</span>
-          </div>
-
-        </article>
-
+        </div>
 
       </div>
 
     </section>
 
 
+    <!-- =====================================
+         EXPERIENCE
+    ====================================== -->
 
-    <!-- ================= EDUCATION ================= -->
+    <section class="section" id="experience">
 
-    <section class="section" id="education">
+      <div class="section-index">
+        03
+      </div>
 
-      <div class="section-heading">
+      <div class="section-content">
 
-        <p class="section-label">
-          ACADEMICS
+        <p class="section-kicker">
+          MISSION LOG
         </p>
 
         <h2>
-          Education
+          EXPERIENCE
         </h2>
+
+
+        <div class="mission-log">
+
+
+          <article class="mission-entry">
+
+            <div class="mission-date">
+              2026
+            </div>
+
+            <div class="mission-details">
+
+              <div class="mission-heading">
+                <div>
+                  <span class="mission-org">NASA L’SPACE PROGRAM</span>
+                  <h3>Electrical Engineer — Mission Concept Academy</h3>
+                </div>
+
+                <span class="mission-period">
+                  JUN — SEP
+                </span>
+              </div>
+
+              <p>
+                Supported electrical and power subsystem design for a lunar
+                south pole rover mission investigating volatile characterization,
+                lunar interior science, and in-situ resource utilization feasibility.
+              </p>
+
+              <ul>
+                <li>
+                  Developed power subsystem PDR deliverables covering
+                  architecture, requirements, verification, procurement,
+                  power budgets, and fault recovery.
+                </li>
+
+                <li>
+                  Analyzed solar arrays, lithium-ion energy storage,
+                  PDU distribution, BMS monitoring, and safe-power modes.
+                </li>
+
+                <li>
+                  Coordinated electrical interfaces and power allocations
+                  across mechanical, payload, thermal, and CDH teams.
+                </li>
+              </ul>
+
+              <div class="mission-tags">
+                <span>POWER</span>
+                <span>PDR</span>
+                <span>SYSTEMS ENGINEERING</span>
+                <span>LUNAR ROVER</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="mission-entry">
+
+            <div class="mission-date">
+              2026
+            </div>
+
+            <div class="mission-details">
+
+              <div class="mission-heading">
+                <div>
+                  <span class="mission-org">NASA L’SPACE NPWEE</span>
+                  <h3>Selected Autonomy, AI &amp; Robotics Contributor</h3>
+                </div>
+
+                <span class="mission-period">
+                  SEP — DEC
+                </span>
+              </div>
+
+              <p>
+                Selected to contribute to lunar mission concept development
+                focused on robotic surface operations and autonomous systems.
+              </p>
+
+              <ul>
+                <li>
+                  Planned technical scope includes autonomous navigation,
+                  obstacle avoidance, sensor integration, and autonomy architecture.
+                </li>
+
+                <li>
+                  Contribute to requirements analysis and mission risk assessment
+                  for autonomous lunar operations.
+                </li>
+              </ul>
+
+              <div class="mission-tags">
+                <span>AUTONOMY</span>
+                <span>AI</span>
+                <span>ROBOTICS</span>
+                <span>NAVIGATION</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="mission-entry">
+
+            <div class="mission-date">
+              2025—
+            </div>
+
+            <div class="mission-details">
+
+              <div class="mission-heading">
+                <div>
+                  <span class="mission-org">VERTICAL FARMING AT BERKELEY</span>
+                  <h3>Engineering Division</h3>
+                </div>
+
+                <span class="mission-period">
+                  AUG 2025 — PRESENT
+                </span>
+              </div>
+
+              <p>
+                Contribute to interdisciplinary engineering systems
+                combining software, sensing, automation,
+                robotics, and hydroponic hardware.
+              </p>
+
+              <ul>
+                <li>
+                  Design and prototype hydroponic nutrient and water delivery systems.
+                </li>
+
+                <li>
+                  Develop automation and sensor-based crop monitoring solutions.
+                </li>
+
+                <li>
+                  Work across design, modeling, manufacturing,
+                  testing, and system integration.
+                </li>
+              </ul>
+
+              <div class="mission-tags">
+                <span>AUTOMATION</span>
+                <span>ROBOTICS</span>
+                <span>SENSORS</span>
+                <span>PROTOTYPING</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="mission-entry">
+
+            <div class="mission-date">
+              2025
+            </div>
+
+            <div class="mission-details">
+
+              <div class="mission-heading">
+                <div>
+                  <span class="mission-org">HELPING HANDS CORPORATION</span>
+                  <h3>Software Engineer Intern</h3>
+                </div>
+
+                <span class="mission-period">
+                  JUN — AUG
+                </span>
+              </div>
+
+              <p>
+                Built and tested software components for intelligent
+                task automation and experimental systems-level technologies.
+              </p>
+
+              <ul>
+                <li>
+                  Developed Python and C++ components interacting
+                  with operating-system functionality.
+                </li>
+
+                <li>
+                  Participated in debugging, code review,
+                  agile development, and AI/automation research.
+                </li>
+              </ul>
+
+              <div class="mission-tags">
+                <span>PYTHON</span>
+                <span>C++</span>
+                <span>SYSTEMS</span>
+                <span>AUTOMATION</span>
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <article class="mission-entry">
+
+            <div class="mission-date">
+              2024—
+            </div>
+
+            <div class="mission-details">
+
+              <div class="mission-heading">
+                <div>
+                  <span class="mission-org">UC BERKELEY FORMULA RACING</span>
+                  <h3>Electrical Subteam — Harness</h3>
+                </div>
+
+                <span class="mission-period">
+                  AUG 2024 — DEC 2025
+                </span>
+              </div>
+
+              <p>
+                Designed and constructed reliable electrical harnessing
+                for a Formula-style race car.
+              </p>
+
+              <ul>
+                <li>
+                  Performed electrical testing and validation
+                  with a failure rate below 1%.
+                </li>
+              </ul>
+
+              <div class="mission-tags">
+                <span>HARNESSING</span>
+                <span>TESTING</span>
+                <span>RELIABILITY</span>
+              </div>
+
+            </div>
+
+          </article>
+
+        </div>
 
       </div>
 
+    </section>
 
-      <div class="education-card">
 
-        <div class="education-main">
+    <!-- =====================================
+         PROJECTS
+    ====================================== -->
+
+    <section class="section" id="projects">
+
+      <div class="section-index">
+        04
+      </div>
+
+      <div class="section-content">
+
+        <p class="section-kicker">
+          BUILD ARCHIVE
+        </p>
+
+        <h2>
+          PROJECTS
+        </h2>
+
+
+        <div class="build-grid">
+
+
+          <article class="build-card">
+
+            <div class="build-id">
+              BUILD_01
+            </div>
+
+            <h3>
+              Scheme Interpreter
+            </h3>
+
+            <p>
+              Implemented parsing, environments, evaluation,
+              recursive expressions, and REPL behavior
+              for the Scheme programming language.
+            </p>
+
+            <div class="build-tech">
+              PYTHON // PARSERS // INTERPRETERS
+            </div>
+
+          </article>
+
+
+          <article class="build-card">
+
+            <div class="build-id">
+              BUILD_02
+            </div>
+
+            <h3>
+              Procedural World Generator
+            </h3>
+
+            <p>
+              Built a 2D exploration engine with deterministic seeds,
+              navigable worlds, HUD functionality,
+              interactivity, and save/load support.
+            </p>
+
+            <div class="build-tech">
+              JAVA // ALGORITHMS // WORLD GENERATION
+            </div>
+
+          </article>
+
+
+          <article class="build-card">
+
+            <div class="build-id">
+              BUILD_03
+            </div>
+
+            <h3>
+              Robot Evolution
+            </h3>
+
+            <p>
+              Developed a robot simulation using sensing,
+              environmental maps, evolutionary algorithms,
+              fitness evaluation, and reproduction.
+            </p>
+
+            <div class="build-tech">
+              C++ // ROBOTICS // EVOLUTION
+            </div>
+
+          </article>
+
+
+          <article class="build-card">
+
+            <div class="build-id">
+              BUILD_04
+            </div>
+
+            <h3>
+              ActionMap
+            </h3>
+
+            <p>
+              Full-stack application integrating civic and news APIs,
+              issue taxonomies, representative discovery,
+              and structured article workflows.
+            </p>
+
+            <div class="build-tech">
+              RAILS // APIs // RSPEC
+            </div>
+
+          </article>
+
+
+          <article class="build-card">
+
+            <div class="build-id">
+              BUILD_05
+            </div>
+
+            <h3>
+              CI &amp; Test Infrastructure
+            </h3>
+
+            <p>
+              Built automated testing and quality pipelines using
+              RSpec, WebMock, GitHub Actions,
+              RuboCop, and Haml-Lint.
+            </p>
+
+            <div class="build-tech">
+              TESTING // CI // QUALITY
+            </div>
+
+          </article>
+
+
+          <article class="build-card">
+
+            <div class="build-id">
+              BUILD_06
+            </div>
+
+            <h3>
+              Treble Boost Circuit
+            </h3>
+
+            <p>
+              Designed and tested an op-amp active high-pass
+              audio circuit with calculated component values,
+              measured frequency response, and optimized gain.
+            </p>
+
+            <div class="build-tech">
+              OP-AMP // FILTERS // CIRCUITS
+            </div>
+
+          </article>
+
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         SKILLS
+    ====================================== -->
+
+    <section class="section" id="skills">
+
+      <div class="section-index">
+        05
+      </div>
+
+      <div class="section-content">
+
+        <p class="section-kicker">
+          TECH STACK
+        </p>
+
+        <h2>
+          CAPABILITIES
+        </h2>
+
+
+        <div class="stack-terminal">
+
+          <div class="terminal-header">
+            <span>ajr@berkeley:~/skills</span>
+            <span>CONNECTED</span>
+          </div>
+
+
+          <div class="terminal-row">
+            <span class="terminal-command">&gt; languages</span>
+
+            <p>
+              C · C++ · Python · Java · JavaScript · Ruby · Scheme · SQL
+            </p>
+          </div>
+
+
+          <div class="terminal-row">
+            <span class="terminal-command">&gt; web_software</span>
+
+            <p>
+              React · Node.js · Express.js · MongoDB · Ruby on Rails ·
+              REST APIs · HTML · CSS
+            </p>
+          </div>
+
+
+          <div class="terminal-row">
+            <span class="terminal-command">&gt; electrical_hardware</span>
+
+            <p>
+              FPGA · Arduino · Op-Amps · Active Filters ·
+              Electrical Harnessing · Sensor Systems · Power Systems
+            </p>
+          </div>
+
+
+          <div class="terminal-row">
+            <span class="terminal-command">&gt; engineering_tools</span>
+
+            <p>
+              MATLAB · AutoCAD · SolidWorks · Fusion 360 ·
+              Git · GitHub · Linux · Docker · LaTeX
+            </p>
+          </div>
+
+
+          <div class="terminal-row">
+            <span class="terminal-command">&gt; test_and_quality</span>
+
+            <p>
+              RSpec · WebMock · GitHub Actions · RuboCop ·
+              Haml-Lint · Agile/Scrum
+            </p>
+          </div>
+
+
+          <div class="terminal-row">
+            <span class="terminal-command">&gt; data</span>
+
+            <p>
+              NumPy · Pandas · SQL · Data Analysis · Visualization
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =====================================
+         EDUCATION
+    ====================================== -->
+
+    <section class="section">
+
+      <div class="section-index">
+        ED
+      </div>
+
+      <div class="section-content">
+
+        <p class="section-kicker">
+          ACADEMIC NODE
+        </p>
+
+        <h2>
+          EDUCATION
+        </h2>
+
+
+        <div class="education-panel">
 
           <div>
 
-            <p class="education-school">
-              University of California, Berkeley
-            </p>
+            <span class="education-code">
+              UC_BERKELEY
+            </span>
 
             <h3>
               B.S. Electrical Engineering &amp; Computer Sciences
             </h3>
 
-            <p class="education-meta">
+            <p>
               Berkeley, California
             </p>
 
           </div>
 
-          <div class="education-date">
-            Expected December 2026
+          <div class="education-status">
+
+            <span>EXPECTED</span>
+
+            <strong>
+              DEC 2026
+            </strong>
+
           </div>
 
         </div>
 
 
-        <div class="education-divider"></div>
+        <div class="course-list">
 
-
-        <div class="coursework">
-
-          <h4>
-            Relevant Coursework
-          </h4>
-
-          <div class="course-grid">
-
-            <span>Digital Design &amp; Integrated Circuits (FPGA)</span>
-
-            <span>Circuit Analysis</span>
-
-            <span>
-              Designing Information Devices &amp; Systems I
-            </span>
-
-            <span>
-              Designing Information Devices &amp; Systems II
-            </span>
-
-            <span>Machine Structures</span>
-
-            <span>Artificial Intelligence</span>
-
-            <span>Linear Algebra</span>
-
-            <span>Differential Equations</span>
-
-            <span>Discrete Mathematics</span>
-
-            <span>Probability Theory</span>
-
-          </div>
+          <span>Digital Design &amp; Integrated Circuits / FPGA</span>
+          <span>Circuit Analysis</span>
+          <span>Designing Information Devices &amp; Systems I</span>
+          <span>Designing Information Devices &amp; Systems II</span>
+          <span>Machine Structures</span>
+          <span>Artificial Intelligence</span>
+          <span>Linear Algebra</span>
+          <span>Differential Equations</span>
+          <span>Discrete Mathematics</span>
+          <span>Probability</span>
 
         </div>
 
@@ -485,947 +971,101 @@
     </section>
 
 
+    <!-- =====================================
+         CONTACT
+    ====================================== -->
 
-    <!-- ================= EXPERIENCE ================= -->
+    <section class="section contact" id="contact">
 
-    <section class="section" id="experience">
+      <div class="section-index">
+        06
+      </div>
 
-      <div class="section-heading">
+      <div class="section-content">
 
-        <p class="section-label">
-          PROFESSIONAL EXPERIENCE
+        <p class="section-kicker">
+          CONNECTION PROTOCOL
         </p>
 
         <h2>
-          Experience
+          INITIATE
+          <span>CONTACT</span>
         </h2>
 
-      </div>
 
-
-      <div class="timeline">
-
-
-        <!-- NASA MCA -->
-
-        <article class="timeline-item">
-
-          <div class="timeline-marker"></div>
-
-          <div class="experience-card">
-
-            <div class="experience-header">
-
-              <div>
-
-                <p class="experience-company">
-                  NASA L’SPACE Program
-                </p>
-
-                <h3>
-                  Electrical Engineer — Mission Concept Academy
-                </h3>
-
-              </div>
-
-              <p class="experience-date">
-                Jun 2026 – Sep 2026
-              </p>
-
-            </div>
-
-
-            <p class="experience-location">
-              Remote
-            </p>
-
-
-            <ul>
-
-              <li>
-                Support electrical and power subsystem design for
-                a lunar south pole rover mission investigating
-                volatile characterization, lunar interior science,
-                and in-situ resource utilization feasibility.
-              </li>
-
-              <li>
-                Develop Power Subsystem Preliminary Design Review
-                deliverables covering requirements, architecture,
-                power-budget assumptions, verification,
-                procurement, and fault-recovery planning.
-              </li>
-
-              <li>
-                Analyze solar generation, lithium-ion storage,
-                PDU distribution, BMS monitoring, safe-power modes,
-                and cross-subsystem loads.
-              </li>
-
-              <li>
-                Coordinate with mechanical, payload, thermal,
-                and command and data handling teams on interfaces,
-                power allocation, and integration risks.
-              </li>
-
-            </ul>
-
-
-            <div class="tags">
-
-              <span>Power Systems</span>
-              <span>Electrical Engineering</span>
-              <span>PDR</span>
-              <span>Systems Engineering</span>
-              <span>Space Systems</span>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- NASA NPWEE -->
-
-        <article class="timeline-item">
-
-          <div class="timeline-marker"></div>
-
-          <div class="experience-card">
-
-            <div class="experience-header">
-
-              <div>
-
-                <p class="experience-company">
-                  NASA L’SPACE NPWEE
-                </p>
-
-                <h3>
-                  Selected Autonomy, AI &amp; Robotics Contributor
-                </h3>
-
-              </div>
-
-              <p class="experience-date">
-                Sep 2026 – Dec 2026
-              </p>
-
-            </div>
-
-
-            <p class="experience-location">
-              Remote
-            </p>
-
-
-            <ul>
-
-              <li>
-                Selected to contribute to lunar mission concept
-                development focused on rover autonomy,
-                AI-enabled decision-making,
-                and robotic surface operations.
-              </li>
-
-              <li>
-                Planned technical scope includes autonomous navigation,
-                obstacle avoidance, sensor integration,
-                autonomy architecture, requirements analysis,
-                and mission risk assessment.
-              </li>
-
-            </ul>
-
-
-            <div class="tags">
-
-              <span>Autonomy</span>
-              <span>Artificial Intelligence</span>
-              <span>Robotics</span>
-              <span>Navigation</span>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- Vertical Farming -->
-
-        <article class="timeline-item">
-
-          <div class="timeline-marker"></div>
-
-          <div class="experience-card">
-
-            <div class="experience-header">
-
-              <div>
-
-                <p class="experience-company">
-                  Vertical Farming at Berkeley
-                </p>
-
-                <h3>
-                  Engineering Division
-                </h3>
-
-              </div>
-
-              <p class="experience-date">
-                Aug 2025 – Present
-              </p>
-
-            </div>
-
-
-            <p class="experience-location">
-              Berkeley, California
-            </p>
-
-
-            <ul>
-
-              <li>
-                Design engineering solutions for vertical farming
-                systems with emphasis on sustainability,
-                automation, and system efficiency.
-              </li>
-
-              <li>
-                Develop and debug software for automation,
-                robotics, and sensor-based crop monitoring.
-              </li>
-
-              <li>
-                Prototype hydroponic systems including nutrient
-                and water delivery mechanisms.
-              </li>
-
-              <li>
-                Collaborate across engineering, programming,
-                and plant science to move projects from design
-                and modeling through manufacturing,
-                testing, and implementation.
-              </li>
-
-            </ul>
-
-
-            <div class="tags">
-
-              <span>Automation</span>
-              <span>Robotics</span>
-              <span>Sensors</span>
-              <span>Hydroponics</span>
-              <span>Prototyping</span>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- Helping Hands -->
-
-        <article class="timeline-item">
-
-          <div class="timeline-marker"></div>
-
-          <div class="experience-card">
-
-            <div class="experience-header">
-
-              <div>
-
-                <p class="experience-company">
-                  Helping Hands Corporation
-                </p>
-
-                <h3>
-                  Software Engineer Intern
-                </h3>
-
-              </div>
-
-              <p class="experience-date">
-                Jun 2025 – Aug 2025
-              </p>
-
-            </div>
-
-
-            <p class="experience-location">
-              Remote
-            </p>
-
-
-            <ul>
-
-              <li>
-                Designed and tested software modules for intelligent
-                task-automation systems and experimental
-                OS-level technologies.
-              </li>
-
-              <li>
-                Developed software components in Python and C++
-                that interfaced with operating-system functionality.
-              </li>
-
-              <li>
-                Participated in code reviews, debugging,
-                and agile development while researching technologies
-                in automation, AI, and systems programming.
-              </li>
-
-            </ul>
-
-
-            <div class="tags">
-
-              <span>Python</span>
-              <span>C++</span>
-              <span>Systems</span>
-              <span>Automation</span>
-              <span>AI</span>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- Formula Racing -->
-
-        <article class="timeline-item">
-
-          <div class="timeline-marker"></div>
-
-          <div class="experience-card">
-
-            <div class="experience-header">
-
-              <div>
-
-                <p class="experience-company">
-                  UC Berkeley Formula Racing
-                </p>
-
-                <h3>
-                  Electrical Subteam — Harness
-                </h3>
-
-              </div>
-
-              <p class="experience-date">
-                Aug 2024 – Dec 2025
-              </p>
-
-            </div>
-
-
-            <p class="experience-location">
-              Berkeley, California
-            </p>
-
-
-            <ul>
-
-              <li>
-                Designed and constructed high-performance electrical
-                harnessing for a Formula-style race car.
-              </li>
-
-              <li>
-                Performed electrical testing and validation,
-                achieving a failure rate below 1%.
-              </li>
-
-            </ul>
-
-
-            <div class="tags">
-
-              <span>Electrical Systems</span>
-              <span>Harness Design</span>
-              <span>Testing</span>
-              <span>Reliability</span>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- Tutor -->
-
-        <article class="timeline-item">
-
-          <div class="timeline-marker"></div>
-
-          <div class="experience-card">
-
-            <div class="experience-header">
-
-              <div>
-
-                <p class="experience-company">
-                  Folsom Lake College
-                </p>
-
-                <h3>
-                  Programming, Mathematics &amp; Physics Tutor
-                </h3>
-
-              </div>
-
-              <p class="experience-date">
-                Apr 2023 – Jan 2025
-              </p>
-
-            </div>
-
-
-            <p class="experience-location">
-              Folsom, California
-            </p>
-
-
-            <ul>
-
-              <li>
-                Tutored students in Calculus, Physics,
-                C++, Java, and Python.
-              </li>
-
-              <li>
-                Mentored students in technical problem-solving,
-                academic development, teamwork,
-                and study strategies.
-              </li>
-
-            </ul>
-
-
-            <div class="tags">
-
-              <span>Programming</span>
-              <span>Mathematics</span>
-              <span>Physics</span>
-              <span>Mentoring</span>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- Elections -->
-
-        <article class="timeline-item">
-
-          <div class="timeline-marker"></div>
-
-          <div class="experience-card">
-
-            <div class="experience-header">
-
-              <div>
-
-                <p class="experience-company">
-                  El Dorado County Elections Department
-                </p>
-
-                <h3>
-                  IT &amp; Student Assistant
-                </h3>
-
-              </div>
-
-              <p class="experience-date">
-                Apr 2022 – Dec 2024
-              </p>
-
-            </div>
-
-
-            <p class="experience-location">
-              Placerville, California
-            </p>
-
-
-            <ul>
-
-              <li>
-                Provided technical support for voting machines,
-                ballot tabulators, voter-registration systems,
-                and election-related hardware and software.
-              </li>
-
-              <li>
-                Installed, configured, maintained,
-                and troubleshot election technology
-                under time-sensitive conditions.
-              </li>
-
-            </ul>
-
-
-            <div class="tags">
-
-              <span>IT Support</span>
-              <span>Hardware</span>
-              <span>Troubleshooting</span>
-              <span>Operations</span>
-
-            </div>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ================= PROJECTS ================= -->
-
-    <section class="section" id="projects">
-
-      <div class="section-heading">
-
-        <p class="section-label">
-          ENGINEERING &amp; SOFTWARE
+        <p class="contact-copy">
+          Interested in electrical engineering,
+          space systems, embedded systems,
+          robotics, autonomy, AI,
+          or software engineering?
         </p>
 
-        <h2>
-          Projects
-        </h2>
 
-        <p class="section-description">
-          Selected projects spanning software,
-          algorithms, robotics, circuits,
-          and engineering design.
-        </p>
+        <div class="contact-grid">
 
-      </div>
-
-
-      <div class="project-grid">
+          <a
+            href="mailto:jawedrahimi@berkeley.edu"
+            class="contact-node"
+          >
+            <span>EMAIL</span>
+            <strong>jawedrahimi@berkeley.edu</strong>
+          </a>
 
 
-        <article class="project-card">
-
-          <p class="project-type">
-            SOFTWARE · PYTHON
-          </p>
-
-          <h3>
-            Scheme Interpreter
-          </h3>
-
-          <p>
-            Built an interpreter for the Scheme programming language,
-            implementing parsing, evaluation, environments,
-            recursive expressions, and REPL behavior.
-          </p>
-
-          <div class="tags">
-            <span>Python</span>
-            <span>Interpreters</span>
-            <span>Parsing</span>
-          </div>
-
-        </article>
+          <a
+            href="https://www.linkedin.com/in/ajrahimi"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-node"
+          >
+            <span>LINKEDIN</span>
+            <strong>/in/ajrahimi</strong>
+          </a>
 
 
-
-        <article class="project-card">
-
-          <p class="project-type">
-            SOFTWARE · JAVA
-          </p>
-
-          <h3>
-            Procedural World Generator
-          </h3>
-
-          <p>
-            Developed a pseudorandom 2D world exploration engine
-            with dynamic environments, navigable layouts,
-            deterministic seed generation,
-            HUD functionality, and save/load support.
-          </p>
-
-          <div class="tags">
-            <span>Java</span>
-            <span>Algorithms</span>
-            <span>Procedural Generation</span>
-          </div>
-
-        </article>
+          <a
+            href="https://github.com/jawedrahimi"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-node"
+          >
+            <span>GITHUB</span>
+            <strong>@jawedrahimi</strong>
+          </a>
 
 
+          <a
+            href="assets/Ahmad_Jawed_Rahimi_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-node"
+          >
+            <span>DOCUMENT</span>
+            <strong>RESUME.PDF</strong>
+          </a>
 
-        <article class="project-card">
-
-          <p class="project-type">
-            ROBOTICS · C++
-          </p>
-
-          <h3>
-            Robot Evolution
-          </h3>
-
-          <p>
-            Created a robot simulation using evolutionary algorithms,
-            environmental sensing, map generation,
-            fitness evaluation, and reproduction logic.
-          </p>
-
-          <div class="tags">
-            <span>C++</span>
-            <span>Robotics</span>
-            <span>Evolutionary Algorithms</span>
-          </div>
-
-        </article>
-
-
-
-        <article class="project-card">
-
-          <p class="project-type">
-            FULL STACK · RUBY ON RAILS
-          </p>
-
-          <h3>
-            ActionMap
-          </h3>
-
-          <p>
-            Built features for discovering representatives
-            and political news, integrated Google Civic,
-            Geocodio, and News APIs,
-            and implemented issue taxonomy and article workflows.
-          </p>
-
-          <div class="tags">
-            <span>Ruby on Rails</span>
-            <span>REST APIs</span>
-            <span>RSpec</span>
-          </div>
-
-        </article>
-
-
-
-        <article class="project-card">
-
-          <p class="project-type">
-            SOFTWARE QUALITY
-          </p>
-
-          <h3>
-            Testing &amp; Continuous Integration
-          </h3>
-
-          <p>
-            Developed RSpec and WebMock test suites,
-            configured GitHub Actions CI,
-            enforced RuboCop and Haml-Lint,
-            and improved application coverage.
-          </p>
-
-          <div class="tags">
-            <span>RSpec</span>
-            <span>WebMock</span>
-            <span>GitHub Actions</span>
-          </div>
-
-        </article>
-
-
-
-        <article class="project-card">
-
-          <p class="project-type">
-            ELECTRICAL ENGINEERING
-          </p>
-
-          <h3>
-            Treble Boost Effect Circuit
-          </h3>
-
-          <p>
-            Designed and built an op-amp-based audio treble boost circuit,
-            calculated active high-pass filter components,
-            measured frequency response,
-            and optimized gain.
-          </p>
-
-          <div class="tags">
-            <span>Op-Amps</span>
-            <span>Filters</span>
-            <span>Circuits</span>
-          </div>
-
-        </article>
-
+        </div>
 
       </div>
 
     </section>
 
-
-
-    <!-- ================= SKILLS ================= -->
-
-    <section class="section" id="skills">
-
-      <div class="section-heading">
-
-        <p class="section-label">
-          TOOLKIT
-        </p>
-
-        <h2>
-          Technical Skills
-        </h2>
-
-      </div>
-
-
-      <div class="skills-grid">
-
-
-        <article class="skill-card">
-
-          <h3>
-            Programming Languages
-          </h3>
-
-          <div class="skill-tags">
-
-            <span>C</span>
-            <span>C++</span>
-            <span>Python</span>
-            <span>Java</span>
-            <span>JavaScript</span>
-            <span>Ruby</span>
-            <span>Scheme</span>
-            <span>SQL</span>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="skill-card">
-
-          <h3>
-            Web &amp; Software
-          </h3>
-
-          <div class="skill-tags">
-
-            <span>React</span>
-            <span>Node.js</span>
-            <span>Express.js</span>
-            <span>MongoDB</span>
-            <span>Ruby on Rails</span>
-            <span>REST APIs</span>
-            <span>HTML/CSS</span>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="skill-card">
-
-          <h3>
-            Electrical &amp; Hardware
-          </h3>
-
-          <div class="skill-tags">
-
-            <span>FPGA</span>
-            <span>Arduino</span>
-            <span>Op-Amps</span>
-            <span>Active Filters</span>
-            <span>Electrical Harnesses</span>
-            <span>Sensor Systems</span>
-            <span>Power Systems</span>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="skill-card">
-
-          <h3>
-            Engineering Tools
-          </h3>
-
-          <div class="skill-tags">
-
-            <span>MATLAB</span>
-            <span>AutoCAD</span>
-            <span>SolidWorks</span>
-            <span>Fusion 360</span>
-            <span>Git/GitHub</span>
-            <span>Linux</span>
-            <span>Docker</span>
-            <span>LaTeX</span>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="skill-card">
-
-          <h3>
-            Testing &amp; Development
-          </h3>
-
-          <div class="skill-tags">
-
-            <span>RSpec</span>
-            <span>WebMock</span>
-            <span>GitHub Actions</span>
-            <span>RuboCop</span>
-            <span>Haml-Lint</span>
-            <span>Agile/Scrum</span>
-
-          </div>
-
-        </article>
-
-
-
-        <article class="skill-card">
-
-          <h3>
-            Data &amp; Analysis
-          </h3>
-
-          <div class="skill-tags">
-
-            <span>NumPy</span>
-            <span>Pandas</span>
-            <span>SQL</span>
-            <span>Data Analysis</span>
-            <span>Visualization</span>
-
-          </div>
-
-        </article>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ================= CONTACT ================= -->
-
-    <section class="contact-section" id="contact">
-
-      <p class="section-label">
-        GET IN TOUCH
-      </p>
-
-      <h2>
-        Let's Connect
-      </h2>
-
-      <p>
-        I'm interested in opportunities involving electrical engineering,
-        embedded systems, robotics, autonomy, AI,
-        software engineering, and space systems.
-      </p>
-
-
-      <div class="contact-links">
-
-        <a href="mailto:jawedrahimi@berkeley.edu">
-          jawedrahimi@berkeley.edu
-        </a>
-
-        <a
-          href="https://www.linkedin.com/in/ajrahimi"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          LinkedIn
-        </a>
-
-        <a
-          href="https://github.com/jawedrahimi"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-
-        <a
-          href="assets/Ahmad_Jawed_Rahimi_CV.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Resume
-        </a>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ================= FOOTER ================= -->
 
     <footer>
 
-      <p>
-        © 2026 Ahmad Jawed Rahimi
-      </p>
+      <span>
+        AJR // PORTFOLIO // 2026
+      </span>
 
       <a href="#home">
-        Back to top ↑
+        RETURN_TO_TOP ↑
       </a>
 
     </footer>
 
-
   </main>
 
 
-  <!-- External JavaScript -->
   <script src="script.js"></script>
 
 </body>

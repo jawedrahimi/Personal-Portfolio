@@ -1,4 +1,3 @@
-<script>
 document.addEventListener("DOMContentLoaded", () => {
 
   /* ==========================================
@@ -21,175 +20,94 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ==========================================
-     ACCORDIONS
+     CURSOR GLOW
   ========================================== */
 
-  const accordions = document.querySelectorAll(".accordion");
+  const cursorGlow =
+    document.querySelector(".cursor-glow");
 
-  function openAccordion(acc) {
-    const body = acc.querySelector(".accordion-body");
+  if (cursorGlow) {
 
-    if (!body) return;
+    window.addEventListener("mousemove", (event) => {
 
-    acc.classList.add("open");
-
-    body.style.maxHeight = body.scrollHeight + "px";
-    body.style.opacity = "1";
-    body.style.transform = "translateY(0)";
-  }
-
-
-  function closeAccordion(acc) {
-    const body = acc.querySelector(".accordion-body");
-
-    if (!body) return;
-
-    acc.classList.remove("open");
-
-    body.style.maxHeight = "0px";
-    body.style.opacity = "0";
-    body.style.transform = "translateY(-4px)";
-  }
-
-
-  /* Start ALL accordions closed */
-
-  accordions.forEach(acc => {
-
-    const body = acc.querySelector(".accordion-body");
-
-    if (!body) return;
-
-    body.style.maxHeight = "0px";
-    body.style.opacity = "0";
-    body.style.transform = "translateY(-4px)";
-
-  });
-
-
-  /*
-     IMPORTANT:
-     We removed:
-
-     openAccordionById("about");
-
-     So About will NOT automatically open.
-  */
-
-
-  /* ==========================================
-     ACCORDION CLICK
-  ========================================== */
-
-  accordions.forEach(acc => {
-
-    const header = acc.querySelector(".accordion-header");
-
-    if (!header) return;
-
-
-    header.addEventListener("click", () => {
-
-      const isOpen =
-        acc.classList.contains("open");
-
-
-      if (isOpen) {
-
-        closeAccordion(acc);
-
-      } else {
-
-        /* Close other accordions */
-
-        accordions.forEach(other => {
-
-          if (other !== acc) {
-            closeAccordion(other);
-          }
-
-        });
-
-
-        /* Open selected accordion */
-
-        openAccordion(acc);
-
-      }
+      cursorGlow.style.transform =
+        `translate3d(${event.clientX}px, ${event.clientY}px, 0)`;
 
     });
 
-  });
+  }
 
 
   /* ==========================================
-     NAVIGATION LINKS
+     SCROLL REVEALS
   ========================================== */
 
-  /*
-     This works with BOTH:
-
-     .nav .links
-
-     and your newer:
-
-     .navbar .nav-links
-  */
-
-  const navLinks = document.querySelectorAll(
-    ".nav .links a[href^='#'], .navbar .nav-links a[href^='#']"
-  );
+  const revealTargets =
+    document.querySelectorAll(
+      ".system-card, .mission-entry, .build-card, .stack-terminal, .education-panel, .contact-node, .about-layout, .profile-metrics"
+    );
 
 
-  navLinks.forEach(link => {
-
-    link.addEventListener("click", e => {
-
-      e.preventDefault();
+  revealTargets.forEach(element => {
+    element.classList.add("reveal");
+  });
 
 
-      const id =
-        link
-          .getAttribute("href")
-          .substring(1);
+  const observer =
+    new IntersectionObserver(
+      entries => {
 
+        entries.forEach(entry => {
 
-      const target =
-        document.getElementById(id);
+          if (entry.isIntersecting) {
 
+            entry.target.classList.add("visible");
 
-      if (!target) return;
+            observer.unobserve(entry.target);
 
-
-      /*
-        Open accordion first if the section
-        is an accordion.
-      */
-
-      const acc =
-        target.classList.contains("accordion")
-          ? target
-          : target.closest(".accordion");
-
-
-      if (acc) {
-
-        accordions.forEach(other => {
-
-          if (other !== acc) {
-            closeAccordion(other);
           }
 
         });
 
-        openAccordion(acc);
+      },
+      {
+        threshold: 0.12
+      }
+    );
 
+
+  revealTargets.forEach(element => {
+    observer.observe(element);
+  });
+
+
+  /* ==========================================
+     NAVIGATION
+  ========================================== */
+
+  const internalLinks =
+    document.querySelectorAll('a[href^="#"]');
+
+
+  internalLinks.forEach(link => {
+
+    link.addEventListener("click", event => {
+
+      const href =
+        link.getAttribute("href");
+
+      if (!href || href === "#") {
+        return;
       }
 
+      const target =
+        document.querySelector(href);
 
-      /*
-        Then smoothly scroll to the section.
-      */
+      if (!target) {
+        return;
+      }
+
+      event.preventDefault();
 
       target.scrollIntoView({
         behavior: "smooth",
@@ -205,197 +123,37 @@ document.addEventListener("DOMContentLoaded", () => {
      HERO PARALLAX
   ========================================== */
 
-  const hero =
-    document.querySelector(".hero");
+  const heroVisual =
+    document.querySelector(".hero-visual");
 
 
-  if (hero) {
+  if (heroVisual) {
 
-    const strength = 0.04;
+    window.addEventListener("mousemove", event => {
 
-
-    hero.addEventListener("mousemove", e => {
-
-      const rect =
-        hero.getBoundingClientRect();
-
+      if (window.innerWidth < 900) {
+        return;
+      }
 
       const x =
-        e.clientX -
-        rect.left -
-        rect.width / 2;
-
+        (event.clientX / window.innerWidth - 0.5) * 8;
 
       const y =
-        e.clientY -
-        rect.top -
-        rect.height / 2;
+        (event.clientY / window.innerHeight - 0.5) * 8;
 
 
-      hero.style.setProperty(
-        "--bg-x",
-        `${-x * strength}px`
-      );
-
-
-      hero.style.setProperty(
-        "--bg-y",
-        `${-y * strength}px`
-      );
+      heroVisual.style.transform =
+        `translate3d(${x}px, ${y}px, 0)`;
 
     });
 
 
-    hero.addEventListener("mouseleave", () => {
+    window.addEventListener("mouseleave", () => {
 
-      hero.style.setProperty(
-        "--bg-x",
-        "0px"
-      );
-
-      hero.style.setProperty(
-        "--bg-y",
-        "0px"
-      );
+      heroVisual.style.transform =
+        "translate3d(0,0,0)";
 
     });
-
-  }
-
-
-  /* ==========================================
-     BUBBLE PARTICLE BACKGROUND
-  ========================================== */
-
-  const canvas =
-    document.getElementById("bubbles-canvas");
-
-
-  if (canvas) {
-
-    const ctx =
-      canvas.getContext("2d");
-
-
-    function resizeCanvas() {
-
-      canvas.width =
-        window.innerWidth;
-
-      canvas.height =
-        window.innerHeight;
-
-    }
-
-
-    resizeCanvas();
-
-
-    window.addEventListener(
-      "resize",
-      resizeCanvas
-    );
-
-
-    const BUBBLE_COUNT = 90;
-
-
-    const bubbles =
-      Array.from(
-        { length: BUBBLE_COUNT },
-        () => ({
-
-          x:
-            Math.random() *
-            canvas.width,
-
-          y:
-            Math.random() *
-            canvas.height,
-
-          r:
-            Math.random() *
-            2 + 1,
-
-          vx:
-            (Math.random() - 0.5) *
-            0.25,
-
-          vy:
-            (Math.random() - 0.5) *
-            0.25,
-
-          alpha:
-            Math.random() *
-            0.5 + 0.3
-
-        })
-      );
-
-
-    function animateBubbles() {
-
-      ctx.clearRect(
-        0,
-        0,
-        canvas.width,
-        canvas.height
-      );
-
-
-      bubbles.forEach(b => {
-
-        ctx.beginPath();
-
-        ctx.arc(
-          b.x,
-          b.y,
-          b.r,
-          0,
-          Math.PI * 2
-        );
-
-
-        ctx.fillStyle =
-          `rgba(120,180,255,${b.alpha})`;
-
-
-        ctx.fill();
-
-
-        b.x += b.vx;
-        b.y += b.vy;
-
-
-        /* Wrap around screen */
-
-        if (b.x < -5) {
-          b.x = canvas.width + 5;
-        }
-
-        if (b.x > canvas.width + 5) {
-          b.x = -5;
-        }
-
-        if (b.y < -5) {
-          b.y = canvas.height + 5;
-        }
-
-        if (b.y > canvas.height + 5) {
-          b.y = -5;
-        }
-
-      });
-
-
-      requestAnimationFrame(
-        animateBubbles
-      );
-
-    }
-
-
-    animateBubbles();
 
   }
 
@@ -405,10 +163,7 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================================== */
 
   requestAnimationFrame(() => {
-
     window.scrollTo(0, 0);
-
   });
 
 });
-</script>
