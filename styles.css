@@ -1,6 +1,3 @@
-Use this as your complete `styles.css` for the futuristic portfolio, including the expanded Education section.
-
-```css
 /* ==========================================
    DESIGN SYSTEM
 ========================================== */
@@ -546,6 +543,7 @@ main {
   0% {
     transform:
       translateY(0);
+
     opacity:
       .2;
   }
@@ -553,6 +551,7 @@ main {
   50% {
     transform:
       translateY(390px);
+
     opacity:
       1;
   }
@@ -560,6 +559,7 @@ main {
   100% {
     transform:
       translateY(0);
+
     opacity:
       .2;
   }
@@ -1326,7 +1326,7 @@ main {
 
 
 /* ==========================================
-   TERMINAL / SKILLS
+   SKILLS TERMINAL
 ========================================== */
 
 .stack-terminal {
@@ -1464,9 +1464,6 @@ main {
     0 0 35px rgba(81, 228, 255, .07);
 }
 
-
-/* Institution code */
-
 .education-code {
   color: var(--cyan);
 
@@ -1476,9 +1473,6 @@ main {
 
   letter-spacing: .08em;
 }
-
-
-/* School name */
 
 .education-panel h3 {
   margin-top: 10px;
@@ -1490,17 +1484,11 @@ main {
   line-height: 1.25;
 }
 
-
-/* General education text */
-
 .education-panel p {
   margin-top: 6px;
 
   color: var(--muted);
 }
-
-
-/* Degree line */
 
 .education-degree {
   max-width: 720px;
@@ -1515,9 +1503,6 @@ main {
 
   line-height: 1.55;
 }
-
-
-/* Right-side attendance */
 
 .education-status {
   min-width: 190px;
@@ -1553,9 +1538,6 @@ main {
   text-align: right;
 }
 
-
-/* Expected graduation */
-
 .education-expected {
   margin-top: 8px;
 
@@ -1567,9 +1549,6 @@ main {
 
   text-align: right;
 }
-
-
-/* GPA / Honors */
 
 .education-honors {
   display: flex;
@@ -1599,9 +1578,6 @@ main {
   letter-spacing: .06em;
 }
 
-
-/* Coursework title */
-
 .coursework-heading {
   margin-top: 28px;
 }
@@ -1615,9 +1591,6 @@ main {
 
   letter-spacing: .08em;
 }
-
-
-/* Coursework tags */
 
 .course-list {
   display: flex;
@@ -1637,56 +1610,18 @@ main {
   color: var(--muted);
 
   background:
-    rgba(10, 17, 25, .44);
+    rgba(10,17,25,.44);
 
   font-family: var(--mono);
 
   font-size: .55rem;
 }
 
-
-/* Smaller spacing before Folsom box */
-
 .education-panel-secondary {
   margin-top: 30px;
 }
 
 
-/* ==========================================
-   MOBILE EDUCATION
-========================================== */
-
-@media (max-width: 760px) {
-
-  .education-panel {
-    flex-direction: column;
-
-    gap: 24px;
-
-    padding: 24px;
-  }
-
-  .education-status {
-    min-width: 0;
-
-    align-items: flex-start;
-  }
-
-  .education-status strong {
-    white-space: normal;
-
-    text-align: left;
-  }
-
-  .education-expected {
-    text-align: left;
-  }
-
-  .education-panel-secondary {
-    margin-top: 24px;
-  }
-
-}
 /* ==========================================
    CONTACT
 ========================================== */
@@ -2015,36 +1950,31 @@ footer a:hover {
   }
 
   .education-panel {
-    flex-direction:
-      column;
+    flex-direction: column;
+
+    gap: 24px;
+
+    padding: 24px;
   }
 
   .education-status {
-    align-items:
-      flex-start;
+    min-width: 0;
 
-    min-width:
-      0;
+    align-items: flex-start;
   }
 
   .education-status strong {
-    text-align:
-      left;
+    white-space: normal;
+
+    text-align: left;
   }
 
   .education-expected {
-    text-align:
-      left;
+    text-align: left;
   }
 
   .education-panel-secondary {
-    margin-top:
-      50px;
-  }
-
-  .degree-grid {
-    grid-template-columns:
-      1fr;
+    margin-top: 24px;
   }
 
   .contact-grid {
