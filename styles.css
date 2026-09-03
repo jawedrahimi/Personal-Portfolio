@@ -1,3 +1,6 @@
+Use this as your complete `styles.css` for the futuristic portfolio, including the expanded Education section.
+
+```css
 /* ==========================================
    DESIGN SYSTEM
 ========================================== */
@@ -79,6 +82,10 @@ body {
   line-height: 1.65;
 }
 
+a {
+  color: inherit;
+}
+
 
 /* ==========================================
    BACKGROUND DETAILS
@@ -122,8 +129,7 @@ body {
   pointer-events: none;
   z-index: -1;
 
-  transform:
-    translate3d(0,0,0);
+  transform: translate3d(0,0,0);
 }
 
 
@@ -218,11 +224,8 @@ body {
 ========================================== */
 
 main {
-  width:
-    min(1220px, 91%);
-
-  margin:
-    0 auto;
+  width: min(1220px, 91%);
+  margin: 0 auto;
 }
 
 
@@ -907,7 +910,7 @@ main {
     grid;
 
   grid-template-columns:
-    repeat(3, 1fr);
+    repeat(2, 1fr);
 
   gap:
     16px;
@@ -1234,7 +1237,7 @@ main {
     relative;
 
   min-height:
-    280px;
+    300px;
 
   padding:
     26px;
@@ -1288,6 +1291,9 @@ main {
   margin-top:
     16px;
 
+  padding-bottom:
+    50px;
+
   color:
     var(--muted);
 }
@@ -1302,6 +1308,9 @@ main {
   bottom:
     24px;
 
+  right:
+    26px;
+
   color:
     rgba(81,228,255,.55);
 
@@ -1310,11 +1319,14 @@ main {
 
   font-size:
     .55rem;
+
+  line-height:
+    1.6;
 }
 
 
 /* ==========================================
-   TERMINAL
+   TERMINAL / SKILLS
 ========================================== */
 
 .stack-terminal {
@@ -1437,7 +1449,23 @@ main {
     1px solid var(--line);
 
   background:
-    rgba(10,17,25,.7);
+    linear-gradient(
+      145deg,
+      rgba(12, 20, 29, .88),
+      rgba(8, 13, 19, .76)
+    );
+
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.education-panel:hover {
+  border-color:
+    var(--line-strong);
+
+  box-shadow:
+    0 0 35px rgba(81,228,255,.05);
 }
 
 .education-code {
@@ -1449,6 +1477,9 @@ main {
 
   font-size:
     .62rem;
+
+  letter-spacing:
+    .08em;
 }
 
 .education-panel h3 {
@@ -1467,9 +1498,26 @@ main {
     var(--muted);
 }
 
+.education-degree {
+  margin-top:
+    8px !important;
+
+  color:
+    var(--text) !important;
+
+  font-size:
+    1.05rem;
+
+  font-weight:
+    600;
+
+  line-height:
+    1.5;
+}
+
 .education-status {
   min-width:
-    150px;
+    180px;
 
   display:
     flex;
@@ -1481,7 +1529,7 @@ main {
     flex-end;
 }
 
-.education-status span {
+.education-status > span:first-child {
   color:
     var(--muted);
 
@@ -1504,6 +1552,82 @@ main {
 
   font-size:
     .82rem;
+
+  text-align:
+    right;
+}
+
+.education-expected {
+  margin-top:
+    8px;
+
+  color:
+    var(--muted) !important;
+
+  font-family:
+    var(--mono);
+
+  font-size:
+    .52rem !important;
+
+  text-align:
+    right;
+}
+
+.education-honors {
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    8px;
+
+  margin-top:
+    18px;
+}
+
+.education-honors span {
+  padding:
+    6px 9px;
+
+  border:
+    1px solid rgba(101, 255, 179, .25);
+
+  background:
+    rgba(101, 255, 179, .04);
+
+  color:
+    var(--green);
+
+  font-family:
+    var(--mono);
+
+  font-size:
+    .56rem;
+
+  letter-spacing:
+    .06em;
+}
+
+.coursework-heading {
+  margin-top:
+    28px;
+}
+
+.coursework-heading span {
+  color:
+    var(--cyan);
+
+  font-family:
+    var(--mono);
+
+  font-size:
+    .58rem;
+
+  letter-spacing:
+    .08em;
 }
 
 .course-list {
@@ -1535,6 +1659,198 @@ main {
 
   font-size:
     .55rem;
+
+  background:
+    rgba(10,17,25,.44);
+}
+
+.education-panel-secondary {
+  margin-top:
+    70px;
+}
+
+
+/* ==========================================
+   FOLSOM DEGREE GRID
+========================================== */
+
+.degree-grid {
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(2, 1fr);
+
+  gap:
+    14px;
+
+  margin-top:
+    18px;
+}
+
+.degree-card {
+  position:
+    relative;
+
+  min-height:
+    210px;
+
+  padding:
+    24px;
+
+  overflow:
+    hidden;
+
+  border:
+    1px solid var(--line);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(12, 20, 29, .86),
+      rgba(8, 13, 19, .72)
+    );
+
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.degree-card::before {
+  content: "";
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  pointer-events:
+    none;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(81, 228, 255, .04),
+      transparent 45%
+    );
+}
+
+.degree-card:hover {
+  transform:
+    translateY(-5px);
+
+  border-color:
+    var(--line-strong);
+
+  box-shadow:
+    0 0 30px rgba(81, 228, 255, .06);
+}
+
+.degree-id {
+  position:
+    relative;
+
+  z-index:
+    1;
+
+  color:
+    var(--cyan);
+
+  font-family:
+    var(--mono);
+
+  font-size:
+    .55rem;
+
+  letter-spacing:
+    .08em;
+}
+
+.degree-card h3 {
+  position:
+    relative;
+
+  z-index:
+    1;
+
+  margin-top:
+    28px;
+
+  font-size:
+    1.05rem;
+
+  font-weight:
+    600;
+}
+
+.degree-name {
+  position:
+    relative;
+
+  z-index:
+    1;
+
+  margin-top:
+    6px;
+
+  color:
+    var(--text) !important;
+
+  font-size:
+    1.2rem;
+
+  font-weight:
+    700;
+}
+
+.degree-meta {
+  position:
+    relative;
+
+  z-index:
+    1;
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    7px;
+
+  margin-top:
+    24px;
+}
+
+.degree-meta span {
+  padding:
+    5px 7px;
+
+  border:
+    1px solid var(--line);
+
+  color:
+    var(--muted);
+
+  font-family:
+    var(--mono);
+
+  font-size:
+    .52rem;
+}
+
+.degree-meta span:first-child {
+  border-color:
+    rgba(81, 228, 255, .28);
+
+  color:
+    var(--cyan);
+
+  background:
+    rgba(81, 228, 255, .03);
 }
 
 
@@ -1684,7 +2000,7 @@ footer a:hover {
 
 
 /* ==========================================
-   REVEAL EFFECT
+   SCROLL REVEAL
 ========================================== */
 
 .reveal {
@@ -1709,14 +2025,19 @@ footer a:hover {
 
 
 /* ==========================================
-   RESPONSIVE
+   TABLET
 ========================================== */
 
-@media (max-width: 1000px) {
+@media (max-width: 1050px) {
 
   .nav-links {
     gap:
       14px;
+  }
+
+  .nav-links a {
+    font-size:
+      .6rem;
   }
 
   .hero-grid {
@@ -1733,11 +2054,6 @@ footer a:hover {
 
     width:
       min(340px, 100%);
-  }
-
-  .systems-grid {
-    grid-template-columns:
-      1fr;
   }
 
   .about-layout {
@@ -1762,6 +2078,10 @@ footer a:hover {
 
 }
 
+
+/* ==========================================
+   MOBILE
+========================================== */
 
 @media (max-width: 760px) {
 
@@ -1822,6 +2142,11 @@ footer a:hover {
       0;
   }
 
+  .systems-grid {
+    grid-template-columns:
+      1fr;
+  }
+
   .build-grid {
     grid-template-columns:
       1fr;
@@ -1843,6 +2168,11 @@ footer a:hover {
       7px;
   }
 
+  .mission-period {
+    white-space:
+      normal;
+  }
+
   .terminal-row {
     grid-template-columns:
       1fr;
@@ -1859,6 +2189,29 @@ footer a:hover {
   .education-status {
     align-items:
       flex-start;
+
+    min-width:
+      0;
+  }
+
+  .education-status strong {
+    text-align:
+      left;
+  }
+
+  .education-expected {
+    text-align:
+      left;
+  }
+
+  .education-panel-secondary {
+    margin-top:
+      50px;
+  }
+
+  .degree-grid {
+    grid-template-columns:
+      1fr;
   }
 
   .contact-grid {
@@ -1882,6 +2235,10 @@ footer a:hover {
 
 }
 
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
 
 @media (max-width: 520px) {
 
@@ -1916,11 +2273,16 @@ footer a:hover {
       none;
   }
 
+  .build-card {
+    min-height:
+      330px;
+  }
+
 }
 
 
 /* ==========================================
-   REDUCED MOTION
+   ACCESSIBILITY
 ========================================== */
 
 @media (prefers-reduced-motion: reduce) {
