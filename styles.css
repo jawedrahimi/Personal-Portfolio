@@ -1994,7 +1994,6 @@ main {
   color:
     #a989ff;
 }
-
 /* ==========================================
    CERTIFICATION EXPAND / COLLAPSE
 ========================================== */
@@ -2010,13 +2009,11 @@ main {
 .cert-actions {
   display: flex;
   justify-content: center;
-
   margin-top: 28px;
 }
 
 .cert-toggle {
   cursor: pointer;
-
   font-family: var(--mono);
 
   background:
