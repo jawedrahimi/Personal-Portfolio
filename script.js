@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const revealTargets =
     document.querySelectorAll(
-      ".system-card, .mission-entry, .build-card, .stack-terminal, .education-panel, .contact-node, .about-layout, .profile-metrics"
+      ".system-card, .mission-entry, .build-card, .stack-terminal, .education-panel, .cert-card, .contact-node, .about-layout, .profile-metrics"
     );
 
 
@@ -79,6 +79,77 @@ document.addEventListener("DOMContentLoaded", () => {
   revealTargets.forEach(element => {
     observer.observe(element);
   });
+
+
+  /* ==========================================
+     CERTIFICATIONS VIEW MORE / SHOW LESS
+  ========================================== */
+
+  const certToggle =
+    document.getElementById("certToggle");
+
+  const extraCerts =
+    document.querySelectorAll(".cert-extra");
+
+
+  if (certToggle && extraCerts.length > 0) {
+
+    certToggle.addEventListener("click", () => {
+
+      const isExpanded =
+        certToggle.classList.toggle("expanded");
+
+
+      extraCerts.forEach(card => {
+
+        card.classList.toggle(
+          "show",
+          isExpanded
+        );
+
+      });
+
+
+      certToggle.textContent =
+        isExpanded
+          ? "SHOW LESS CERTIFICATIONS"
+          : "VIEW MORE CERTIFICATIONS";
+
+
+      /* Re-check newly visible cards for reveal animation */
+
+      if (isExpanded) {
+
+        extraCerts.forEach(card => {
+
+          observer.observe(card);
+
+        });
+
+      }
+
+
+      /* When collapsing, return smoothly to certification section */
+
+      if (!isExpanded) {
+
+        const certificationsSection =
+          document.getElementById("certifications");
+
+        if (certificationsSection) {
+
+          certificationsSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
+        }
+
+      }
+
+    });
+
+  }
 
 
   /* ==========================================
