@@ -266,32 +266,25 @@ main {
   min-height:
     calc(100vh - 190px);
 
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
     minmax(0, 1.35fr)
     minmax(280px, .65fr);
 
-  align-items:
-    center;
+  align-items: center;
 
-  gap:
-    90px;
+  gap: 90px;
 }
 
 .system-status {
-  width:
-    max-content;
+  width: max-content;
 
-  display:
-    flex;
+  display: flex;
 
-  align-items:
-    center;
+  align-items: center;
 
-  gap:
-    9px;
+  gap: 9px;
 
   padding:
     7px 11px;
@@ -316,14 +309,10 @@ main {
 }
 
 .status-dot {
-  width:
-    7px;
+  width: 7px;
+  height: 7px;
 
-  height:
-    7px;
-
-  border-radius:
-    50%;
+  border-radius: 50%;
 
   background:
     var(--green);
@@ -339,20 +328,17 @@ main {
 
   0%,
   100% {
-    opacity:
-      1;
+    opacity: 1;
   }
 
   50% {
-    opacity:
-      .3;
+    opacity: .3;
   }
 
 }
 
 .hero-kicker {
-  margin-top:
-    28px;
+  margin-top: 28px;
 
   color:
     var(--cyan);
@@ -368,8 +354,7 @@ main {
 }
 
 .hero h1 {
-  margin-top:
-    17px;
+  margin-top: 17px;
 
   font-size:
     clamp(4.5rem, 9.5vw, 8.5rem);
@@ -385,19 +370,16 @@ main {
 }
 
 .hero h1 span {
-  display:
-    block;
+  display: block;
 
-  color:
-    transparent;
+  color: transparent;
 
   -webkit-text-stroke:
     1px rgba(237,247,255,.6);
 }
 
 .hero-role {
-  margin-top:
-    32px;
+  margin-top: 32px;
 
   color:
     var(--text);
@@ -424,14 +406,11 @@ main {
 }
 
 .hero-actions {
-  display:
-    flex;
+  display: flex;
 
-  flex-wrap:
-    wrap;
+  flex-wrap: wrap;
 
-  gap:
-    10px;
+  gap: 10px;
 
   margin-top:
     30px;
@@ -445,6 +424,9 @@ main {
     46px;
 
   align-items:
+    center;
+
+  justify-content:
     center;
 
   padding:
@@ -509,8 +491,7 @@ main {
 ========================================== */
 
 .hero-visual {
-  position:
-    relative;
+  position: relative;
 
   width:
     min(360px, 100%);
@@ -532,8 +513,7 @@ main {
 }
 
 .hero-image {
-  display:
-    block;
+  display: block;
 
   width:
     100%;
@@ -553,8 +533,7 @@ main {
 }
 
 .image-scanner {
-  position:
-    absolute;
+  position: absolute;
 
   z-index:
     3;
@@ -615,8 +594,7 @@ main {
 }
 
 .hud-corner {
-  position:
-    absolute;
+  position: absolute;
 
   width:
     26px;
@@ -685,8 +663,7 @@ main {
 }
 
 .image-label {
-  position:
-    absolute;
+  position: absolute;
 
   z-index:
     5;
@@ -735,8 +712,7 @@ main {
   min-height:
     50px;
 
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
     150px 1fr;
@@ -766,14 +742,11 @@ main {
 }
 
 .signal-content {
-  display:
-    flex;
+  display: flex;
 
-  flex-wrap:
-    wrap;
+  flex-wrap: wrap;
 
-  gap:
-    15px;
+  gap: 15px;
 
   color:
     var(--muted);
@@ -807,6 +780,10 @@ main {
 
   border-top:
     1px solid var(--line);
+}
+
+.section-content {
+  min-width: 0;
 }
 
 .section-index {
@@ -862,8 +839,7 @@ main {
 ========================================== */
 
 .about-layout {
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
     .95fr 1.3fr;
@@ -900,8 +876,7 @@ main {
 }
 
 .profile-metrics {
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
     repeat(4, 1fr);
@@ -920,8 +895,7 @@ main {
   min-height:
     100px;
 
-  display:
-    flex;
+  display: flex;
 
   flex-direction:
     column;
@@ -968,15 +942,14 @@ main {
 
 
 /* ==========================================
-   CURRENT SYSTEMS
+   SYSTEMS
 ========================================== */
 
 .systems-grid {
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
-    repeat(2, 1fr);
+    repeat(2, minmax(0, 1fr));
 
   gap:
     16px;
@@ -1043,8 +1016,7 @@ main {
 }
 
 .system-card-top {
-  display:
-    flex;
+  display: flex;
 
   align-items:
     center;
@@ -1106,8 +1078,7 @@ main {
 }
 
 .system-readouts {
-  display:
-    flex;
+  display: flex;
 
   flex-wrap:
     wrap;
@@ -1147,11 +1118,10 @@ main {
 }
 
 .mission-entry {
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
-    120px 1fr;
+    120px minmax(0, 1fr);
 
   gap:
     30px;
@@ -1175,8 +1145,7 @@ main {
 }
 
 .mission-heading {
-  display:
-    flex;
+  display: flex;
 
   justify-content:
     space-between;
@@ -1249,8 +1218,7 @@ main {
 }
 
 .mission-tags {
-  display:
-    flex;
+  display: flex;
 
   flex-wrap:
     wrap;
@@ -1285,11 +1253,10 @@ main {
 ========================================== */
 
 .build-grid {
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
-    repeat(2, 1fr);
+    repeat(2, minmax(0, 1fr));
 
   gap:
     15px;
@@ -1413,8 +1380,7 @@ main {
   min-height:
     45px;
 
-  display:
-    flex;
+  display: flex;
 
   align-items:
     center;
@@ -1444,11 +1410,10 @@ main {
 }
 
 .terminal-row {
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
-    220px 1fr;
+    220px minmax(0, 1fr);
 
   gap:
     25px;
@@ -1496,8 +1461,7 @@ main {
 ========================================== */
 
 .education-panel {
-  display:
-    flex;
+  display: flex;
 
   justify-content:
     space-between;
@@ -1663,8 +1627,7 @@ main {
 }
 
 .education-honors {
-  display:
-    flex;
+  display: flex;
 
   flex-wrap:
     wrap;
@@ -1681,10 +1644,10 @@ main {
     6px 9px;
 
   border:
-    1px solid rgba(101, 255, 179, .25);
+    1px solid rgba(101,255,179,.25);
 
   background:
-    rgba(101, 255, 179, .04);
+    rgba(101,255,179,.04);
 
   color:
     var(--green);
@@ -1719,8 +1682,7 @@ main {
 }
 
 .course-list {
-  display:
-    flex;
+  display: flex;
 
   flex-wrap:
     wrap;
@@ -1763,8 +1725,7 @@ main {
 ========================================== */
 
 .cert-grid {
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
     repeat(2, minmax(0, 1fr));
@@ -1801,8 +1762,8 @@ main {
   background:
     linear-gradient(
       145deg,
-      rgba(12, 20, 29, .86),
-      rgba(8, 13, 19, .72)
+      rgba(12,20,29,.86),
+      rgba(8,13,19,.72)
     );
 
   transition:
@@ -1827,7 +1788,7 @@ main {
   background:
     linear-gradient(
       135deg,
-      rgba(81, 228, 255, .035),
+      rgba(81,228,255,.035),
       transparent 45%
     );
 }
@@ -1840,7 +1801,7 @@ main {
     var(--line-strong);
 
   box-shadow:
-    0 0 30px rgba(81, 228, 255, .06);
+    0 0 30px rgba(81,228,255,.06);
 }
 
 .cert-top {
@@ -1987,34 +1948,55 @@ main {
 
 .cert-featured {
   border-color:
-    rgba(140, 99, 255, .20);
+    rgba(140,99,255,.20);
 }
 
 .cert-featured .cert-provider {
   color:
     #a989ff;
 }
+
+
 /* ==========================================
-   CERTIFICATION EXPAND / COLLAPSE
+   CERTIFICATION VIEW MORE
 ========================================== */
 
+/*
+  IMPORTANT:
+  All cards with cert-extra are hidden initially.
+  JavaScript adds "show" when the user clicks the button.
+*/
+
 .cert-extra {
-  display: none;
+  display:
+    none;
 }
 
 .cert-extra.show {
-  display: flex;
+  display:
+    flex;
 }
 
 .cert-actions {
-  display: flex;
-  justify-content: center;
-  margin-top: 28px;
+  display:
+    flex;
+
+  justify-content:
+    center;
+
+  margin-top:
+    30px;
 }
 
 .cert-toggle {
-  cursor: pointer;
-  font-family: var(--mono);
+  cursor:
+    pointer;
+
+  appearance:
+    none;
+
+  font-family:
+    var(--mono);
 
   background:
     rgba(11,18,27,.68);
@@ -2025,11 +2007,12 @@ main {
 
 .cert-toggle:hover {
   border-color:
-    var(--line-strong);
+    var(--cyan);
 
   box-shadow:
-    0 0 25px rgba(81,228,255,.08);
+    0 0 25px rgba(81,228,255,.10);
 }
+
 
 /* ==========================================
    CONTACT
@@ -2055,11 +2038,10 @@ main {
 }
 
 .contact-grid {
-  display:
-    grid;
+  display: grid;
 
   grid-template-columns:
-    repeat(2, 1fr);
+    repeat(2, minmax(0, 1fr));
 
   gap:
     12px;
@@ -2129,6 +2111,9 @@ main {
 
   font-size:
     .72rem;
+
+  overflow-wrap:
+    anywhere;
 }
 
 
@@ -2177,7 +2162,7 @@ footer a:hover {
 
 
 /* ==========================================
-   REVEAL
+   SCROLL REVEAL
 ========================================== */
 
 .reveal {
@@ -2319,12 +2304,10 @@ footer a:hover {
       0;
   }
 
-  .systems-grid {
-    grid-template-columns:
-      1fr;
-  }
-
-  .build-grid {
+  .systems-grid,
+  .build-grid,
+  .cert-grid,
+  .contact-grid {
     grid-template-columns:
       1fr;
   }
@@ -2395,19 +2378,9 @@ footer a:hover {
       24px;
   }
 
-  .cert-grid {
-    grid-template-columns:
-      1fr;
-  }
-
   .cert-card {
     min-height:
       230px;
-  }
-
-  .contact-grid {
-    grid-template-columns:
-      1fr;
   }
 
   footer {
@@ -2470,11 +2443,11 @@ footer a:hover {
   }
 
   .cert-top {
-    align-items:
-      flex-start;
-
     flex-direction:
       column;
+
+    align-items:
+      flex-start;
 
     gap:
       5px;

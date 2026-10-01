@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (cursorGlow) {
 
-    window.addEventListener("mousemove", (event) => {
+    window.addEventListener("mousemove", event => {
 
       cursorGlow.style.transform =
         `translate3d(${event.clientX}px, ${event.clientY}px, 0)`;
@@ -75,6 +75,34 @@ document.addEventListener("DOMContentLoaded", () => {
           ? "SHOW LESS CERTIFICATIONS"
           : "VIEW MORE CERTIFICATIONS";
 
+
+      certToggle.setAttribute(
+        "aria-expanded",
+        certificationsExpanded.toString()
+      );
+
+
+      /*
+       * When collapsing, smoothly return to
+       * the beginning of the certifications section.
+       */
+
+      if (!certificationsExpanded) {
+
+        const certificationsSection =
+          document.getElementById("certifications");
+
+        if (certificationsSection) {
+
+          certificationsSection.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+          });
+
+        }
+
+      }
+
     });
 
   }
@@ -84,6 +112,15 @@ document.addEventListener("DOMContentLoaded", () => {
      SCROLL REVEALS
   ========================================== */
 
+  /*
+   * Do NOT include .cert-card here.
+   *
+   * Hidden cert-extra cards use display:none,
+   * so keeping certification cards out of the
+   * reveal observer avoids conflicts with the
+   * View More button.
+   */
+
   const revealTargets =
     document.querySelectorAll(
       ".system-card, .mission-entry, .build-card, .stack-terminal, .education-panel, .contact-node, .about-layout, .profile-metrics"
@@ -91,7 +128,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   revealTargets.forEach(element => {
+
     element.classList.add("reveal");
+
   });
 
 
@@ -119,7 +158,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   revealTargets.forEach(element => {
+
     observer.observe(element);
+
   });
 
 
@@ -138,6 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const href =
         link.getAttribute("href");
 
+
       if (!href || href === "#") {
         return;
       }
@@ -145,6 +187,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       const target =
         document.querySelector(href);
+
 
       if (!target) {
         return;
@@ -209,7 +252,9 @@ document.addEventListener("DOMContentLoaded", () => {
   ========================================== */
 
   requestAnimationFrame(() => {
+
     window.scrollTo(0, 0);
+
   });
 
 });
