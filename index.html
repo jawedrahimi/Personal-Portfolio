@@ -22,8 +22,10 @@
 
 
 <body>
+  <a class="skip-link" href="#about">SKIP TO CONTENT</a>
+  <div class="scroll-progress" aria-hidden="true"><span></span></div>
 
-  <div class="noise"></div>
+<div class="noise"></div>
   <div class="cursor-glow"></div>
 
 
@@ -514,40 +516,91 @@
         <h2>PROJECTS</h2>
 
         <article class="featured-project">
-          <div class="featured-project-top">
-            <div>
-              <span class="featured-eyebrow">FEATURED ENGINEERING CASE STUDY</span>
-              <h3>Lunar South Pole Rover — Power Subsystem</h3>
-            </div>
-            <span class="featured-status">PDR COMPLETE</span>
-          </div>
+          <div class="featured-project-grid">
+            <div class="featured-project-content">
+              <div class="featured-project-header">
+                <div class="featured-project-heading">
+                  <span class="featured-eyebrow">FEATURED ENGINEERING CASE STUDY</span>
+                  <h3>Lunar South Pole Rover</h3>
+                  <p class="featured-subtitle">
+                    Electrical Power Subsystem · NASA L’SPACE Mission Concept Academy
+                  </p>
+                </div>
 
-          <p class="featured-project-copy">
-            Electrical power-system design for a NASA L’SPACE lunar south pole rover concept.
-            My work focused on requirements, power architecture, solar generation, lithium-ion
-            energy storage, PDU/BMS functions, operating modes, fault protection, procurement,
-            and verification planning.
-          </p>
+                <div class="featured-status-block">
+                  <span>DESIGN REVIEW</span>
+                  <strong>PDR COMPLETE</strong>
+                </div>
+              </div>
+
+              <p class="featured-project-copy">
+                Supported the electrical power-subsystem design for a multidisciplinary lunar rover
+                mission concept operating near the lunar south pole. My work covered subsystem
+                requirements, solar generation, lithium-ion energy storage, regulated distribution,
+                PDU/BMS functions, operating modes, fault protection, procurement planning, and
+                verification strategy for the Preliminary Design Review.
+              </p>
+
+              <div class="featured-project-tags">
+                <span>POWER SYSTEMS</span>
+                <span>SOLAR ARRAYS</span>
+                <span>LI-ION BATTERIES</span>
+                <span>PDU / BMS</span>
+                <span>FAULT PROTECTION</span>
+                <span>VERIFICATION</span>
+              </div>
+
+              <div class="featured-project-actions">
+                <a class="future-btn primary" href="projects/lspace-power.html">
+                  OPEN CASE STUDY
+                </a>
+
+                <a
+                  class="future-btn"
+                  href="assets/LSPACE_Team4_PDR.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  VIEW TEAM PDR
+                </a>
+              </div>
+            </div>
+
+            <a
+              class="featured-project-visual"
+              href="projects/lspace-power.html"
+              aria-label="Open Lunar South Pole Rover power subsystem case study"
+            >
+              <img
+                src="assets/lspace-rover-cad.png"
+                alt="Labeled CAD model of the Team 4 lunar rover"
+              >
+              <span class="visual-tag">
+                TEAM 4 // PRELIMINARY VEHICLE CAD
+              </span>
+            </a>
+          </div>
 
           <div class="project-metrics">
-            <div><span>VEHICLE MASS</span><strong>153.455 kg</strong></div>
-            <div><span>MAX VEHICLE POWER</span><strong>298.91 W</strong></div>
-            <div><span>SOLAR REQUIREMENT</span><strong>300–500 W</strong></div>
-            <div><span>MISSION REGION</span><strong>LUNAR SOUTH POLE</strong></div>
-          </div>
+            <div>
+              <span>VEHICLE MASS</span>
+              <strong>153.5 kg</strong>
+            </div>
 
-          <div class="featured-project-tags">
-            <span>POWER SYSTEMS</span>
-            <span>SOLAR ARRAYS</span>
-            <span>LI-ION BATTERIES</span>
-            <span>PDU / BMS</span>
-            <span>FAULT ISOLATION</span>
-            <span>VERIFICATION</span>
-          </div>
+            <div>
+              <span>MAX VEHICLE POWER</span>
+              <strong>~299 W</strong>
+            </div>
 
-          <div class="featured-project-actions">
-            <a class="future-btn primary" href="projects/lspace-power.html">OPEN CASE STUDY</a>
-            <a class="future-btn" href="assets/LSPACE_Team4_PDR.pdf" target="_blank" rel="noopener noreferrer">VIEW TEAM PDR</a>
+            <div>
+              <span>SOLAR GENERATION</span>
+              <strong>300–500 W</strong>
+            </div>
+
+            <div>
+              <span>MISSION REGION</span>
+              <strong>LUNAR SOUTH POLE</strong>
+            </div>
           </div>
         </article>
 
@@ -1634,6 +1687,15 @@
 
 
   <script src="script.js"></script>
+
+  <button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Back to top"
+  >
+    ↑
+  </button>
 
 </body>
 

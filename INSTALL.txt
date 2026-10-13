@@ -1,0 +1,20 @@
+PORTFOLIO VISUAL REFRESH
+
+Replace only:
+- index.html
+- styles.css
+- script.js
+- projects/lspace-power.html
+
+IMPORTANT:
+Do NOT delete or replace your existing assets/ folder.
+This package intentionally does not include assets so your portrait,
+resume, PDR, and L'SPACE images stay in place.
+
+The HTML expects these existing files:
+- assets/ahmad.png
+- assets/Ahmad_Jawed_Rahimi_CV.pdf
+- assets/LSPACE_Team4_PDR.pdf
+- assets/lspace-rover-cad.png
+- assets/lspace-power-requirements.png
+- assets/lspace-power-profile.png
