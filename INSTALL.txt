@@ -1,4 +1,11 @@
-PORTFOLIO VISUAL REFRESH
+PORTFOLIO VISUAL REFRESH V2
+
+This version fixes the homepage L'SPACE issue:
+- The main page now shows only a compact featured-project teaser.
+- The full L'SPACE engineering case study appears ONLY after clicking OPEN CASE STUDY.
+- Supporting text is larger and brighter across the site.
+- Muted grey was replaced with a higher-contrast blue-grey.
+- Cards and labels have stronger contrast on the dark background.
 
 Replace only:
 - index.html
@@ -7,11 +14,10 @@ Replace only:
 - projects/lspace-power.html
 
 IMPORTANT:
-Do NOT delete or replace your existing assets/ folder.
-This package intentionally does not include assets so your portrait,
-resume, PDR, and L'SPACE images stay in place.
+KEEP your existing assets/ folder.
+Do not delete or replace it.
 
-The HTML expects these existing files:
+The site expects:
 - assets/ahmad.png
 - assets/Ahmad_Jawed_Rahimi_CV.pdf
 - assets/LSPACE_Team4_PDR.pdf

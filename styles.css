@@ -4241,3 +4241,295 @@ button:focus-visible {
   }
 
 }
+
+
+/* ==========================================
+   VISUAL REFRESH V2
+   Compact featured project + stronger readability
+========================================== */
+
+:root {
+  --text: #f7fbff;
+  --muted: #c3d1dc;
+  --muted-strong: #dde7ee;
+  --cyan: #6cecff;
+  --blue: #88a5ff;
+  --violet: #ad90ff;
+  --green: #83ffca;
+  --line: rgba(145, 205, 255, 0.28);
+  --line-strong: rgba(108, 236, 255, 0.58);
+}
+
+/* Do not let supporting text become tiny. */
+.section-kicker,
+.hero-kicker,
+.system-card-top,
+.image-label,
+.mission-org,
+.mission-period,
+.metric-label,
+.build-id,
+.build-tech,
+.education-code,
+.education-status span,
+.cert-meta,
+.cert-provider,
+.terminal-command,
+.contact-label,
+.featured-eyebrow,
+.featured-subtitle,
+.case-kicker,
+.case-source,
+.case-caption,
+.case-number,
+.case-topbar-links a,
+.case-toc a,
+.case-toc > span {
+  font-size: clamp(0.72rem, 0.70rem + 0.08vw, 0.79rem) !important;
+  line-height: 1.45;
+}
+
+/* Brighter secondary text throughout the dark theme. */
+.hero-role,
+.hero-description,
+.about-copy p,
+.system-card p,
+.system-subtitle,
+.mission-details p,
+.mission-details li,
+.build-card p,
+.stack-terminal p,
+.education-panel p,
+.education-degree,
+.cert-card p,
+.contact-node p,
+.featured-project-copy,
+.case-body p,
+.case-body li {
+  color: var(--muted) !important;
+}
+
+.hero-description,
+.about-copy p,
+.system-card p,
+.mission-details p,
+.mission-details li,
+.build-card p,
+.education-panel p,
+.featured-project-copy {
+  font-size: 1rem !important;
+  line-height: 1.78 !important;
+}
+
+.build-tech,
+.mission-tags span,
+.system-readouts span,
+.featured-project-tags span,
+.course-list span,
+.education-honors span {
+  color: #d9f7ff !important;
+}
+
+.section-index {
+  color: rgba(108, 236, 255, .72) !important;
+}
+
+.section-content h2 {
+  text-shadow: 0 0 34px rgba(108, 236, 255, .06);
+}
+
+/* Slightly richer panel surfaces so text separates from the page. */
+.system-card,
+.build-card,
+.education-panel,
+.contact-node,
+.stack-terminal,
+.cert-card {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(15, 28, 41, .96),
+      rgba(7, 15, 23, .94)
+    ) !important;
+
+  border-color:
+    rgba(145, 205, 255, .24) !important;
+}
+
+/* Homepage L'SPACE teaser: compact by design.
+   The detailed engineering story lives only on the case-study page. */
+.featured-project-compact {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1.1fr) minmax(280px, .9fr);
+  gap: 26px;
+  align-items: stretch;
+
+  margin-top: 34px !important;
+  margin-bottom: 34px !important;
+  padding: 24px !important;
+
+  border: 1px solid rgba(108, 236, 255, .42) !important;
+
+  background:
+    radial-gradient(
+      circle at 82% 10%,
+      rgba(108, 236, 255, .10),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(13, 27, 40, .98),
+      rgba(6, 13, 20, .97)
+    ) !important;
+
+  box-shadow:
+    0 20px 58px rgba(0,0,0,.24),
+    0 0 34px rgba(108,236,255,.055) !important;
+}
+
+.featured-project-compact::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-top: 2px solid rgba(108,236,255,.7);
+  clip-path: polygon(0 0, 120px 0, 100px 100%, 0 100%);
+}
+
+.featured-project-compact-copy {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+}
+
+.featured-project-compact h3 {
+  margin-top: 8px;
+  font-size: clamp(2rem, 3.5vw, 3.4rem) !important;
+  line-height: 1 !important;
+}
+
+.featured-project-compact .featured-subtitle {
+  margin-top: 10px;
+  color: var(--muted-strong) !important;
+}
+
+.featured-project-compact .featured-project-copy {
+  max-width: 720px;
+  margin-top: 18px;
+}
+
+.featured-project-compact .featured-project-tags {
+  margin-top: 17px;
+}
+
+.featured-project-compact .featured-project-actions {
+  margin-top: 20px;
+}
+
+.featured-project-compact-visual {
+  position: relative;
+  min-height: 245px;
+  overflow: hidden;
+  border: 1px solid rgba(145,205,255,.24);
+  background: #071019;
+  text-decoration: none;
+}
+
+.featured-project-compact-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      180deg,
+      transparent 52%,
+      rgba(3,8,13,.88)
+    );
+}
+
+.featured-project-compact-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 245px;
+  object-fit: cover;
+  transition:
+    transform .4s ease,
+    filter .4s ease;
+}
+
+.featured-project-compact-visual:hover img {
+  transform: scale(1.025);
+  filter: brightness(1.08);
+}
+
+.featured-project-compact-visual span {
+  position: absolute;
+  z-index: 2;
+  left: 14px;
+  bottom: 12px;
+
+  color: #e1fbff;
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .05em;
+}
+
+/* Prevent the old full-size featured layout rules from affecting this teaser. */
+.featured-project-compact .project-metrics,
+.featured-project-compact .featured-status-block,
+.featured-project-compact .featured-project-grid,
+.featured-project-compact .featured-project-visual {
+  display: none !important;
+}
+
+/* Better contact/link contrast. */
+.contact-node a,
+.footer a {
+  color: #dff9ff;
+}
+
+.contact-node a:hover,
+.footer a:hover {
+  color: var(--cyan);
+}
+
+/* Case study: keep long-form page readable. */
+.case-body {
+  max-width: 940px;
+}
+
+.case-body p,
+.case-body li {
+  color: #c7d5df !important;
+  font-size: 1.02rem !important;
+}
+
+.case-feature-grid article p {
+  color: #bdccd7 !important;
+}
+
+.case-toc {
+  box-shadow: 0 14px 30px rgba(0,0,0,.16);
+}
+
+@media (max-width: 900px) {
+  .featured-project-compact {
+    grid-template-columns: 1fr;
+  }
+
+  .featured-project-compact-visual,
+  .featured-project-compact-visual img {
+    min-height: 280px;
+  }
+}
+
+@media (max-width: 560px) {
+  .featured-project-compact {
+    padding: 20px !important;
+  }
+
+  .featured-project-compact-visual,
+  .featured-project-compact-visual img {
+    min-height: 220px;
+  }
+}
