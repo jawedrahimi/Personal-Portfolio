@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Lunar Rover Power Subsystem | Ahmad Jawed Rahimi</title>
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="cursor-glow"></div>
+
+  <main class="case-page">
+    <a class="case-back" href="../index.html#projects">← RETURN TO BUILD ARCHIVE</a>
+
+    <header class="case-hero">
+      <p class="case-kicker">NASA L’SPACE // MISSION CONCEPT ACADEMY // SUMMER 2026</p>
+      <h1>LUNAR ROVER<br>POWER SUBSYSTEM</h1>
+      <p class="case-lead">
+        Electrical power-system engineering for a lunar south pole rover mission concept.
+        My focus included requirements, architecture, operating-mode analysis, solar generation,
+        lithium-ion storage, power distribution, monitoring, fault protection, procurement, and verification planning.
+      </p>
+
+      <div class="case-meta">
+        <div><span>ROLE</span><strong>Electrical Engineer</strong></div>
+        <div><span>MISSION REGION</span><strong>PNS02 / Lunar South Pole</strong></div>
+        <div><span>VEHICLE MASS</span><strong>153.455 kg</strong></div>
+        <div><span>MAX POWER</span><strong>298.91 W</strong></div>
+      </div>
+
+      <div class="case-actions">
+        <a class="future-btn primary" href="../assets/LSPACE_Team4_PDR.pdf" target="_blank" rel="noopener noreferrer">VIEW TEAM PDR</a>
+        <a class="future-btn" href="../index.html#experience">VIEW EXPERIENCE</a>
+      </div>
+    </header>
+
+    <section class="case-section">
+      <div class="case-number">01 // MISSION</div>
+      <div class="case-body">
+        <h2>Mission Context</h2>
+        <p>
+          The team developed a rover concept for the PNS02 region near the lunar south pole.
+          The science concept combined lunar interior investigation with volatile characterization,
+          including water-ice mapping in permanently shadowed regions and early-stage ISRU feasibility.
+        </p>
+        <img class="case-image" src="../assets/lspace-rover-cad.png" alt="Labeled lunar rover CAD model showing major subsystems">
+        <p class="case-caption">TEAM PDR // LABELED ROVER CAD // ELECTRICAL, CDH, THERMAL, PAYLOAD, MECHANICAL</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-number">02 // MY ROLE</div>
+      <div class="case-body">
+        <h2>Electrical Power Engineering</h2>
+        <p>
+          I supported the rover Power Subsystem PDR, translating mission constraints into electrical requirements
+          and developing the subsystem concept across generation, storage, regulation, distribution, monitoring,
+          fault recovery, procurement, and verification.
+        </p>
+        <ul>
+          <li>Developed and refined power-subsystem requirements and verification approaches.</li>
+          <li>Supported solar-array and lithium-ion battery sizing and operating-mode reasoning.</li>
+          <li>Defined PDU/BMS monitoring, load management, safe-power, and fault-isolation functions.</li>
+          <li>Coordinated electrical interfaces with payload, mobility, thermal, and CDH loads.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-number">03 // ARCHITECTURE</div>
+      <div class="case-body">
+        <h2>Generation, Storage &amp; Distribution</h2>
+        <p>
+          The baseline architecture used solar generation as the primary energy source and rechargeable storage
+          to support operations during reduced illumination and permanently shadowed-region traverses.
+          The design also required regulated power distribution to rover subsystems and electrical monitoring for fault detection and energy management.
+        </p>
+        <div class="case-callout">
+          Solar-array generation requirement: approximately <strong>300–500 W</strong> under applicable illuminated operating conditions.
+        </div>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-number">04 // REQUIREMENTS</div>
+      <div class="case-body">
+        <h2>Power Requirements</h2>
+        <p>
+          The PDR formalized requirements for generation, rechargeable storage, regulated distribution,
+          safe-power behavior, health monitoring, electromagnetic compatibility, subsystem mass, and modular fault isolation.
+        </p>
+        <img class="case-image" src="../assets/lspace-power-requirements.png" alt="Power subsystem requirements table from team PDR">
+        <p class="case-caption">TEAM PDR // POWER SUBSYSTEM REQUIREMENTS</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-number">05 // OPERATIONS</div>
+      <div class="case-body">
+        <h2>Operating Modes &amp; Power Budget</h2>
+        <p>
+          Power planning considered changing rover demand across mobility, science, thermal control,
+          communications, charging, and PSR operations. The mission concept required strategic load scheduling
+          because solar availability, thermal survival, and science operations compete for limited energy.
+        </p>
+        <img class="case-image" src="../assets/lspace-power-profile.png" alt="Power versus time chart from team PDR">
+        <p class="case-caption">TEAM PDR // POWER VS. TIME PROFILE</p>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-number">06 // VERIFICATION</div>
+      <div class="case-body">
+        <h2>Verification Strategy</h2>
+        <p>
+          Verification progresses from analysis and inspection to component, subsystem, and integrated testing.
+          Planned checks cover photovoltaic generation, battery storage, regulation, distribution, monitoring,
+          fault protection, electrical interfaces, environmental performance, and electromagnetic compatibility.
+        </p>
+        <ul>
+          <li>Measure voltage, current, startup behavior, steady-state power, and shutdown behavior on protected branches.</li>
+          <li>Exercise representative high-current and switching loads while monitoring sensitive instrumentation for interference.</li>
+          <li>Demonstrate end-to-end generation, charging, stored-energy operation, regulation, monitoring, switching, and fault isolation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="case-section">
+      <div class="case-number">07 // DELIVERABLE</div>
+      <div class="case-body">
+        <h2>Preliminary Design Review</h2>
+        <p>
+          The final team PDR documents the complete mission concept across science, mechanical, power, CDH,
+          thermal, payload, interfaces, risk management, schedule, cost, and verification planning.
+        </p>
+        <div class="case-actions">
+          <a class="future-btn primary" href="../assets/LSPACE_Team4_PDR.pdf" target="_blank" rel="noopener noreferrer">OPEN 288-PAGE TEAM PDR</a>
+          <a class="future-btn" href="../index.html#projects">BACK TO PROJECTS</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>
