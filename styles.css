@@ -4533,3 +4533,100 @@ button:focus-visible {
     min-height: 220px;
   }
 }
+
+
+/* ==========================================
+   L'SPACE CLOSED HOMEPAGE CARD
+   Full case study stays on projects/lspace-power.html
+========================================== */
+
+.lspace-closed-card {
+  position: relative;
+  margin-top: 34px;
+  margin-bottom: 34px;
+  padding: 24px 26px;
+
+  border: 1px solid rgba(108, 236, 255, .38);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(13, 27, 40, .96),
+      rgba(6, 13, 20, .96)
+    );
+
+  box-shadow:
+    0 18px 46px rgba(0, 0, 0, .22),
+    0 0 28px rgba(108, 236, 255, .045);
+}
+
+.lspace-closed-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 2px;
+  background: var(--cyan);
+}
+
+.lspace-closed-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.lspace-closed-card h3 {
+  margin-top: 8px;
+  color: var(--text);
+  font-size: clamp(1.65rem, 2.7vw, 2.5rem);
+  line-height: 1.05;
+  letter-spacing: -.03em;
+}
+
+.lspace-closed-card > p {
+  max-width: 850px;
+  margin-top: 16px;
+
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.72;
+}
+
+.lspace-closed-status {
+  flex: 0 0 auto;
+
+  padding: 8px 10px;
+
+  border: 1px solid rgba(131, 255, 202, .28);
+  background: rgba(131, 255, 202, .045);
+
+  color: var(--green);
+
+  font-family: var(--mono);
+  font-size: .72rem;
+  letter-spacing: .045em;
+}
+
+.lspace-closed-card .featured-project-tags {
+  margin-top: 17px;
+}
+
+.lspace-closed-card .featured-project-actions {
+  margin-top: 20px;
+}
+
+@media (max-width: 700px) {
+  .lspace-closed-top {
+    flex-direction: column;
+  }
+
+  .lspace-closed-status {
+    align-self: flex-start;
+  }
+
+  .lspace-closed-card {
+    padding: 21px 18px;
+  }
+}
