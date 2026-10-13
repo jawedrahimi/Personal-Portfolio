@@ -82,11 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
 
 
-      /*
-       * When collapsing, smoothly return to
-       * the beginning of the certifications section.
-       */
-
       if (!certificationsExpanded) {
 
         const certificationsSection =
@@ -111,15 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
   /* ==========================================
      SCROLL REVEALS
   ========================================== */
-
-  /*
-   * Do NOT include .cert-card here.
-   *
-   * Hidden cert-extra cards use display:none,
-   * so keeping certification cards out of the
-   * reveal observer avoids conflicts with the
-   * View More button.
-   */
 
   const revealTargets =
     document.querySelectorAll(
